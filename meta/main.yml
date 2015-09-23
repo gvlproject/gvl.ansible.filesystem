@@ -14,7 +14,7 @@ galaxy_info:
   - cloud
   - genomics
 dependencies:
-  - { role: gvl.filesystem-presetup }
+  - { role: gvl.ansible.filesystem.presetup }
   - { role: galaxyprojectdotorg.cloudman-database }
   - { role: galaxyprojectdotorg.galaxy }
   - { role: galaxyprojectdotorg.trackster }
