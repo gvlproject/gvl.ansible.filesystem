@@ -32,12 +32,12 @@
 - name: Patchup bowtie2 executable paths so they work with tophat2 and modules
   shell: executable=/bin/bash cd {{ item }}/*/package*/*/; ln -s bowtie2 bowtie2-align
   with_fileglob:
-    - "{{ galaxy_server_dir }}/tools/bowtie2/*"
+    - "{{ galaxyFS_base_dir }}/tools/bowtie2/*"
   sudo: yes
   sudo_user: "{{ galaxy_user_name }}"
 
 # Install mako to satisfy proportional venn
 - name: Install mako lib to satisfy proportional venn
-  pip: name=mako virtualenv={{ galaxy_tools_base_dir }}/.venv
+  pip: name=mako virtualenv="{{ galaxy_venv_dir }}"
   sudo: yes
   sudo_user: "{{ galaxy_user_name }}"
