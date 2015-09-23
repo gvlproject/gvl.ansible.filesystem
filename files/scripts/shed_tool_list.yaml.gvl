@@ -528,11 +528,6 @@ tools:
   revision: 1670f0565000
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: bcftools_view
-  owner: gregory-minevich
-  revision: 6572c40a8505
-  tool_panel_section_id: samtools
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # bed_tools - BED tools
@@ -781,11 +776,11 @@ tools:
   revision: 2611a96c30b7
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: trimmomatic_032
-  owner: simon-gladman
-  revision: cb56fdcbe0a5
+- name: trimmomatic
+  owner: pjbriggs
+  revision: a60283899c6d
   tool_panel_section_id: ngs_qc
-  tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # ngs_mapping - NGS: Mapping
@@ -941,12 +936,7 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: freebayes
   owner: devteam
-  revision: 55c06df02168
-  tool_panel_section_id: ngs_variant_analysis
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: freebayes_wrapper
-  owner: devteam
-  revision: 33a0e6aca936
+  revision: 6d9407020066
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: vcf_filter
