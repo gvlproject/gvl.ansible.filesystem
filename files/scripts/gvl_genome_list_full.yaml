@@ -1,0 +1,171 @@
+api_key: <Galaxy Admin user API key>
+galaxy_instance: <IP address for target Galaxy instance>
+# Each dbkey should posses keys and values for all DMs that require
+# arguments other than the dbkey itself
+sort_order: &custom_sort_order
+  "sorting|sort_selector": custom
+  "sorting|sequence_identifiers_0|identifier": chr1
+  "sorting|sequence_identifiers_1|identifier": chr2
+  "sorting|sequence_identifiers_2|identifier": chr3
+  "sorting|sequence_identifiers_3|identifier": chr4
+  "sorting|sequence_identifiers_4|identifier": chr5
+  "sorting|sequence_identifiers_5|identifier": chr6
+  "sorting|sequence_identifiers_6|identifier": chr7
+  "sorting|sequence_identifiers_7|identifier": chr8
+  "sorting|sequence_identifiers_8|identifier": chr9
+  "sorting|sequence_identifiers_9|identifier": chr10
+  "sorting|sequence_identifiers_10|identifier": chr11
+  "sorting|sequence_identifiers_11|identifier": chr12
+  "sorting|sequence_identifiers_12|identifier": chr13
+  "sorting|sequence_identifiers_13|identifier": chr14
+  "sorting|sequence_identifiers_14|identifier": chr15
+  "sorting|sequence_identifiers_15|identifier": chr16
+  "sorting|sequence_identifiers_16|identifier": chr17
+  "sorting|sequence_identifiers_17|identifier": chr18
+  "sorting|sequence_identifiers_18|identifier": chr19
+  "sorting|sequence_identifiers_19|identifier": chr20
+  "sorting|sequence_identifiers_20|identifier": chr21
+  "sorting|sequence_identifiers_21|identifier": chr22
+  "sorting|sequence_identifiers_22|identifier": chrX
+  "sorting|sequence_identifiers_23|identifier": chrY
+  "sorting|sequence_identifiers_24|identifier": chrM
+  "sorting|handle_not_listed|handle_not_listed_selector": keep_append
+genomes:
+- dbkey: bosTau7
+  "dbkey_source|dbkey_source_selector": new
+  "dbkey_source|dbkey": bosTau7
+  "dbkey_source|dbkey_name": Cow (bosTau7)
+  "reference_source|reference_source_selector": ucsc
+  "reference_source|requested_dbkey": bosTau7
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: bosTau7
+  tophat2: True
+  genome_version: UMD3.1.76
+- dbkey: ce10
+  "dbkey_source|dbkey_source_selector": new
+  "dbkey_source|dbkey": ce10
+  "dbkey_source|dbkey_name": C. elegans (ce10)
+  "reference_source|reference_source_selector": ucsc
+  "reference_source|requested_dbkey": ce10
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: ce10
+  tophat2: True
+  genome_version: WS241
+- dbkey: danRer7
+  "dbkey_source|dbkey_source_selector": new
+  "dbkey_source|dbkey": danRer7
+  "dbkey_source|dbkey_name": Zebrafish (danRer7)
+  "reference_source|reference_source_selector": ucsc
+  "reference_source|requested_dbkey": danRer7
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: danRer7
+  tophat2: True
+  genome_version: Zv9.76
+- dbkey: dm3
+  "dbkey_source|dbkey_source_selector": existing
+  "dbkey_source|dbkey": dm3
+  all_fasta_source: dm3
+  tophat2: True
+  genome_version: BDGP5.76
+- dbkey: hg19
+  "dbkey_source|dbkey_source_selector": new
+  "dbkey_source|dbkey": hg19
+  "dbkey_source|dbkey_name": Human (hg19)
+  "reference_source|reference_source_selector": ucsc
+  "reference_source|requested_dbkey": hg19
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: hg19
+  tophat2: True
+  genome_version: hg19
+- dbkey: hg38
+  "dbkey_source|dbkey_source_selector": new
+  "dbkey_source|dbkey": hg38
+  "dbkey_source|dbkey_name": Human (hg38)
+  "reference_source|reference_source_selector": ucsc
+  "reference_source|requested_dbkey": hg38
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: hg38
+  tophat2: True
+  genome_version: hg38
+- dbkey: mm10
+  "dbkey_source|dbkey_source_selector": new
+  "dbkey_source|dbkey": mm10
+  "dbkey_source|dbkey_name": Mouse (mm10)
+  "reference_source|reference_source_selector": ucsc
+  "reference_source|requested_dbkey": mm10
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: mm10
+  tophat2: True
+  genome_version: GRCm38.76
+- dbkey: mm9
+  "dbkey_source|dbkey_source_selector": new
+  "dbkey_source|dbkey": mm9
+  "dbkey_source|dbkey_name": Mouse (mm9)
+  "reference_source|reference_source_selector": ucsc
+  "reference_source|requested_dbkey": mm9
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: mm9
+  tophat2: True
+  genome_version: testMm37.61
+- dbkey: oviAri3
+  "dbkey_source|dbkey_source_selector": new
+  "dbkey_source|dbkey": oviAri3
+  "dbkey_source|dbkey_name": Sheep (oviAri3)
+  "reference_source|reference_source_selector": ucsc
+  "reference_source|requested_dbkey": oviAri3
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: oviAri3
+  tophat2: True
+  genome_version: Oar_v3.1.76
+- dbkey: rn5
+  "dbkey_source|dbkey_source_selector": new
+  "dbkey_source|dbkey": rn5
+  "dbkey_source|dbkey_name": Rat (rn5)
+  "reference_source|reference_source_selector": ucsc
+  "reference_source|requested_dbkey": rn5
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: rn5
+  tophat2: True
+  genome_version: Rnor_5.0.76
+- dbkey: rn6
+  "dbkey_source|dbkey_source_selector": new
+  "dbkey_source|dbkey": rn6
+  "dbkey_source|dbkey_name": Rat (rn6)
+  "reference_source|reference_source_selector": ucsc
+  "reference_source|requested_dbkey": rn6
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: rn6
+  tophat2: True
+  genome_version: EquCab2.70
+- dbkey: sacCer2
+  "dbkey_source|dbkey_source_selector": existing
+  "dbkey_source|dbkey": sacCer2
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: sacCer2
+  tophat2: True
+  genome_version: EF4.74
+- dbkey: sacCer3
+  "dbkey_source|dbkey_source_selector": new
+  "dbkey_source|dbkey": sacCer3
+  "dbkey_source|dbkey_name": S. cerevisiae (sacCer3)
+  "reference_source|reference_source_selector": ucsc
+  "reference_source|requested_dbkey": sacCer3
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: sacCer3
+  tophat2: True
+  genome_version: R64-1-1.76
+- dbkey: xenTro2
+  "dbkey_source|dbkey_source_selector": existing
+  "dbkey_source|dbkey": xenTro2
+  << : *custom_sort_order # merge in custom sort order defined above
+  all_fasta_source: xenTro2
+  tophat2: True
+  genome_version: JGI_4.2.76
+# List of DMs to run for listed dbkeys
+data_managers:
+- id: data_manager_fetch_genome_all_fasta_dbkey
+- id: gatk_picard_index_builder
+- id: bwa_mem_index_builder_data_manager
+- id: bowtie2_index_builder_data_manager
+- id: sam_fasta_index_builder
+- id: data_manager_snpeff_download
