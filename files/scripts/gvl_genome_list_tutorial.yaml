@@ -44,14 +44,12 @@ genomes:
 - dbkey: dm3
   "dbkey_source|dbkey_source_selector": existing
   "dbkey_source|dbkey": dm3
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: dm3
   tophat2: True
   genome_version: EquCab2.70
 - dbkey: sacCer2
   "dbkey_source|dbkey_source_selector": existing
   "dbkey_source|dbkey": sacCer2
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: sacCer2
   tophat2: True
   genome_version: EquCab2.70

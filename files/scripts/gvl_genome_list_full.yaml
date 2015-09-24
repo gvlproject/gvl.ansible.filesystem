@@ -37,7 +37,6 @@ genomes:
   "dbkey_source|dbkey_name": Cow (bosTau7)
   "reference_source|reference_source_selector": ucsc
   "reference_source|requested_dbkey": bosTau7
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: bosTau7
   tophat2: True
   genome_version: UMD3.1.76
@@ -47,7 +46,6 @@ genomes:
   "dbkey_source|dbkey_name": C. elegans (ce10)
   "reference_source|reference_source_selector": ucsc
   "reference_source|requested_dbkey": ce10
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: ce10
   tophat2: True
   genome_version: WS241
@@ -57,7 +55,6 @@ genomes:
   "dbkey_source|dbkey_name": Zebrafish (danRer7)
   "reference_source|reference_source_selector": ucsc
   "reference_source|requested_dbkey": danRer7
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: danRer7
   tophat2: True
   genome_version: Zv9.76
@@ -113,7 +110,6 @@ genomes:
   "dbkey_source|dbkey_name": Sheep (oviAri3)
   "reference_source|reference_source_selector": ucsc
   "reference_source|requested_dbkey": oviAri3
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: oviAri3
   tophat2: True
   genome_version: Oar_v3.1.76
@@ -123,7 +119,6 @@ genomes:
   "dbkey_source|dbkey_name": Rat (rn5)
   "reference_source|reference_source_selector": ucsc
   "reference_source|requested_dbkey": rn5
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: rn5
   tophat2: True
   genome_version: Rnor_5.0.76
@@ -133,14 +128,12 @@ genomes:
   "dbkey_source|dbkey_name": Rat (rn6)
   "reference_source|reference_source_selector": ucsc
   "reference_source|requested_dbkey": rn6
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: rn6
   tophat2: True
   genome_version: EquCab2.70
 - dbkey: sacCer2
   "dbkey_source|dbkey_source_selector": existing
   "dbkey_source|dbkey": sacCer2
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: sacCer2
   tophat2: True
   genome_version: EF4.74
@@ -150,14 +143,12 @@ genomes:
   "dbkey_source|dbkey_name": S. cerevisiae (sacCer3)
   "reference_source|reference_source_selector": ucsc
   "reference_source|requested_dbkey": sacCer3
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: sacCer3
   tophat2: True
   genome_version: R64-1-1.76
 - dbkey: xenTro2
   "dbkey_source|dbkey_source_selector": existing
   "dbkey_source|dbkey": xenTro2
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: xenTro2
   tophat2: True
   genome_version: JGI_4.2.76
