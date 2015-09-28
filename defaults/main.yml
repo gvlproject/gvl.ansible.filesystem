@@ -152,7 +152,7 @@ galaxy_admin_user_password: "TODO-GenerateRandomOrDeleteBootstrapUser"
 gvl_create_archive: False
 # cloudman_bucket_name: cm-ng-dev
 gvl_fs_archive_name: "gvl-galaxyfs-{{ gvl_version }}.tar.gz"
-gvl_fs_archive_path: /tmp/galaxy_archive
+gvl_fs_archive_path: /mnt/galaxy_archive
 OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
 # OS_TENANT_ID:
 # OS_TENANT_NAME:

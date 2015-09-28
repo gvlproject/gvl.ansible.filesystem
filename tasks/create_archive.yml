@@ -20,6 +20,8 @@
 
 - name: GVL Galaxy - Create galaxy archive target directory
   file: dest="{{ gvl_fs_archive_path }}" owner={{ galaxy_user_name }} group={{ galaxy_user_name }} state=directory
+  sudo: yes
+  sudo_user: root
 
 - name: GVL Galaxy - Install openstack swift packages
   pip: name={{ item }} virtualenv="{{ gvl_fs_archive_path }}/venv"
