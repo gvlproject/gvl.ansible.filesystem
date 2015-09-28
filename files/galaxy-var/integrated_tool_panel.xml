@@ -70,6 +70,8 @@
     </section>
     <section id="hgv" name="HGV" version="">
     </section>
+    <section id="alignment" name="NGS: Alignment" version="">
+    </section>
     <label id="ngs_analysis" text="NGS Analysis" version="" />
     <section id="ngs_qc" name="NGS: QC and manipulation" version="">
     </section>

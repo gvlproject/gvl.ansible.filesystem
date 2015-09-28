@@ -35,7 +35,7 @@
   sudo_user: root
 
 - name: GVL Galaxy - Create new filesystem archive
-  command: chdir={{ galaxyFS_base_dir }} tar -czf {{ gvl_fs_archive_path }}/{{ gvl_fs_archive_name }} -C {{ galaxyFS_base_dir }} .
+  command: chdir={{ galaxyFS_base_dir }} tar --hard-dereference -czf {{ gvl_fs_archive_path }}/{{ gvl_fs_archive_name }} -C {{ galaxyFS_base_dir }} .
   sudo: yes
   sudo_user: root
 

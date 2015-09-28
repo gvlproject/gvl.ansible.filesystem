@@ -43,6 +43,8 @@
   </section>
   <section id="ngs_picard" name="NGS: Picard">
   </section>
+  <section id="alignment" name="NGS: Alignment">
+  </section>
   <label id="ngs_analysis" text="NGS Analysis" />
   <section id="ngs_qc" name="NGS: QC and manipulation">
   </section>
