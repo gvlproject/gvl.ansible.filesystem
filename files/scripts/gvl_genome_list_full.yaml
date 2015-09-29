@@ -90,7 +90,6 @@ genomes:
   "dbkey_source|dbkey_name": Mouse (mm10)
   "reference_source|reference_source_selector": ucsc
   "reference_source|requested_dbkey": mm10
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: mm10
   tophat2: True
   genome_version: GRCm38.76
@@ -100,7 +99,6 @@ genomes:
   "dbkey_source|dbkey_name": Mouse (mm9)
   "reference_source|reference_source_selector": ucsc
   "reference_source|requested_dbkey": mm9
-  << : *custom_sort_order # merge in custom sort order defined above
   all_fasta_source: mm9
   tophat2: True
   genome_version: testMm37.61
