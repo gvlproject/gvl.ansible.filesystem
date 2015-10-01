@@ -70,6 +70,7 @@ genomes:
   tophat2: True
   genome_version: Zv9.76
   index_algorithm: bwtsw
+  data_managers: *all_data_managers # ref data_managers_list defined previously
 - dbkey: dm3
   "dbkey_source|dbkey_source_selector": existing
   "dbkey_source|dbkey": dm3
