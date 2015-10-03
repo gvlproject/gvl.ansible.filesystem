@@ -180,6 +180,7 @@ genomes:
   "dbkey_source|dbkey": xenTro2
   all_fasta_source: xenTro2
   tophat2: True
+  index_algorithm: bwtsw
   data_managers:
     - id: data_manager_fetch_genome_all_fasta_dbkey
     - id: gatk_picard_index_builder
