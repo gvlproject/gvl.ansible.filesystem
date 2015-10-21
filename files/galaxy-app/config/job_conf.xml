@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<job_conf>
+    <plugins>
+        <plugin id="dynamic" type="runner">
+            <param id="rules_module">galaxy.jobs.rules</param>
+        </plugin>
+        <plugin id="slurm" type="runner" load="galaxy.jobs.runners.slurm:SlurmJobRunner" />
+        <plugin id="pulsar_rest" type="runner" load="galaxy.jobs.runners.pulsar:PulsarRESTJobRunner" />
+        <plugin id="local" type="runner" load="galaxy.jobs.runners.local:LocalJobRunner" workers="4" />
+    </plugins>
+    <handlers default="main">
+        <handler id="main" />
+    </handlers>
+    <destinations default="default_dynamic_job_wrapper">
+        <!-- Slurm specific destinations -->
+        <destination id="slurm_cluster" runner="slurm"/>
+        <destination id="slurm_2slots" runner="slurm">
+            <param id="nativeSpecification">--ntasks=2</param>
+        </destination>
+        <destination id="slurm_4slots" runner="slurm">
+            <param id="nativeSpecification">--ntasks=4</param>
+        </destination>
+        <destination id="slurn_8slots" runner="slurm">
+            <param id="nativeSpecification">--ntasks=8</param>
+        </destination>
+        <destination id="slurm_16slots" runner="slurm">
+            <param id="nativeSpecification">--ntasks=16</param>
+        </destination>
+
+        <!-- Dynamic destinations -->
+        <destination id="mapping_dynamic" runner="dynamic">
+            <param id="type">python</param>
+            <param id="function">mapping_dynamic_job_wrapper</param>
+        </destination>
+
+        <destination id="default_dynamic_job_wrapper" runner="dynamic">
+          <param id="type">python</param>
+          <param id="function">default_dynamic_job_wrapper</param>
+        </destination>
+
+        <!-- pulsar config -->
+        <destination id="pulsar_server" runner="pulsar_rest">
+            <param id="url">http://pulsar_server_ip:pulsar_server_port/</param>
+        </destination>
+        <destination id="local_runner" runner="local" />
+    </destinations>
+    <tools>
+        <!-- <tool id="upload1" destination="local_runner" /> -->
+        <!-- <tool id="random_lines1" destination="pulsar_server" /> -->
+        <!-- <tool id="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.3.1" destination="mapping_dynamic" />
+        <tool id="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa/0.3.1" destination="slurm_4slots" />
+        <tool id="toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/0.6" destination="slurm_4slots" />
+        <tool id="testtoolshed.g2.bx.psu.edu/repos/simon-gladman/velvetoptimiser/velvetoptimiser/1.1.0" destination="slurm_4slots" />
+        <tool id="toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.32.2" destination="slurm_4slots" /> -->
+
+    </tools>
+</job_conf>
