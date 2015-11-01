@@ -684,7 +684,7 @@ tools:
 
 - name: ncbi_blast_plus
   owner: devteam
-  revision: e23b0cdeeba6
+  revision: 577d9c12411a
   tool_panel_section_id: blast+
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
