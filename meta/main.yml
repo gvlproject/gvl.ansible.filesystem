@@ -14,9 +14,17 @@ galaxy_info:
   - cloud
   - genomics
 dependencies:
-  - { role: gvl.ansible.filesystem.presetup }
+  - { role: gvl.ansible.filesystem.presetup, galaxy_shed_tools_dir: "{{ galaxyFS_base_dir }}/shed_tools" }
   - { role: galaxyprojectdotorg.cloudman-database }
-  - { role: galaxyprojectdotorg.galaxy }
-  - { role: galaxyprojectdotorg.trackster }
+  - { role: galaxyprojectdotorg.galaxy,
+      galaxy_config: "{{ gvl_galaxy_config }}",
+      galaxy_mutable_configs: "{{ gvl_galaxy_mutable_configs }}"
+    }
+  - { role: galaxyprojectdotorg.trackster, len_file_path: "{{ galaxy_len_file_path }}" }
   - { role: galaxyprojectdotorg.cloudman-galaxy-setup }
-  - { role: galaxyprojectdotorg.galaxy-tools, galaxy_tools_create_bootstrap_user: yes }
+  - { role: galaxyprojectdotorg.galaxy-tools,
+      galaxy_tools_create_bootstrap_user: yes,
+      galaxy_tools_admin_user_password: "TODO-GenerateRandomOrDeleteBootstrapUser",
+      galaxy_tools_delete_bootstrap_user: yes,
+      galaxy_tools_tool_list_files: [ "roles/gvl.ansible.filesystem/files/scripts/shed_tool_list.yaml.gvl" ]
+    }
