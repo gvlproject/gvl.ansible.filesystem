@@ -91,25 +91,25 @@ gvl_galaxy_config:
     use: egg:PasteDeploy#prefix
     prefix: /galaxy
 
-galaxy_mutable_configs:
+gvl_galaxy_mutable_configs:
   - src: "{{ galaxy_server_dir }}/config/shed_tool_conf.xml.sample"
     dest: "{{ galaxy_shed_tool_conf_file }}"
   - src: "{{ galaxy_server_dir }}/config/migrated_tools_conf.xml.sample"
-    dest: "{{ galaxy_config['app:main']['migrated_tools_config'] if galaxy_config is defined and 'app:main' in galaxy_config and 'migrated_tools_config' in galaxy_config['app:main'] else galaxy_config_default['app:main']['migrated_tools_config'] }}"
+    dest: "{{ gvl_galaxy_config['app:main']['migrated_tools_config'] if gvl_galaxy_config is defined and 'app:main' in gvl_galaxy_config and 'migrated_tools_config' in gvl_galaxy_config['app:main'] else galaxy_config_default['app:main']['migrated_tools_config'] }}"
   - src: "{{ galaxy_server_dir }}/config/shed_data_manager_conf.xml.sample"
-    dest: "{{ galaxy_config['app:main']['shed_data_manager_config_file'] if galaxy_config is defined and 'app:main' in galaxy_config and 'shed_data_manager_config_file' in galaxy_config['app:main'] else galaxy_config_default['app:main']['shed_data_manager_config_file'] }}"
+    dest: "{{ gvl_galaxy_config['app:main']['shed_data_manager_config_file'] if gvl_galaxy_config is defined and 'app:main' in gvl_galaxy_config and 'shed_data_manager_config_file' in gvl_galaxy_config['app:main'] else galaxy_config_default['app:main']['shed_data_manager_config_file'] }}"
   - src: "{{ galaxy_server_dir }}/config/shed_tool_data_table_conf.xml.sample"
-    dest: "{{ galaxy_config['app:main']['shed_tool_data_table_config'] if galaxy_config is defined and 'app:main' in galaxy_config and 'shed_tool_data_table_config' in galaxy_config['app:main'] else galaxy_config_default['app:main']['shed_tool_data_table_config'] }}"
+    dest: "{{ gvl_galaxy_config['app:main']['shed_tool_data_table_config'] if gvl_galaxy_config is defined and 'app:main' in gvl_galaxy_config and 'shed_tool_data_table_config' in gvl_galaxy_config['app:main'] else galaxy_config_default['app:main']['shed_tool_data_table_config'] }}"
   - src: "{{ galaxy_server_dir }}/config/datatypes_conf.xml.sample"
-    dest: "{{ galaxy_config['app:main']['datatypes_config_file'] if galaxy_config is defined and 'app:main' in galaxy_config and 'datatypes_config_file' in galaxy_config['app:main'] else galaxy_config_default['app:main']['datatypes_config_file'] }}"
+    dest: "{{ gvl_galaxy_config['app:main']['datatypes_config_file'] if gvl_galaxy_config is defined and 'app:main' in gvl_galaxy_config and 'datatypes_config_file' in gvl_galaxy_config['app:main'] else galaxy_config_default['app:main']['datatypes_config_file'] }}"
   - src: "{{ galaxy_server_dir }}/config/tool_data_table_conf.xml.sample"
-    dest: "{{ galaxy_config['app:main']['tool_data_table_config_path'] }}"
+    dest: "{{ gvl_galaxy_config['app:main']['tool_data_table_config_path'] }}"
   - src: "{{ galaxy_server_dir }}/config/tool_conf.xml.sample"
-    dest: "{{ galaxy_config_dir }}/tool_conf.xml"
+    dest: "{{ gvl_galaxy_config_dir }}/tool_conf.xml"
   - src: "{{ galaxy_server_dir }}/tool-data/shared/ucsc/builds.txt.sample"
-    dest: "{{ galaxy_config['app:main']['builds_file_path'] }}"
+    dest: "{{ gvl_galaxy_config['app:main']['builds_file_path'] }}"
   - src: "{{ galaxy_server_dir }}/config/tool_sheds_conf.xml.sample"
-    dest: "{{ galaxy_config['app:main']['tool_sheds_config_file'] }}"
+    dest: "{{ gvl_galaxy_config['app:main']['tool_sheds_config_file'] }}"
 
 #-- Pulsar configs
 pulsar_server_dir: "{{ galaxyFS_base_dir }}/pulsar"
@@ -141,7 +141,7 @@ OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
 # OS_USERNAME:
 # OS_PASSWORD:
 
-cmg_extra_files:
+gvl_cmg_extra_files:
   - src: roles/gvl.ansible.filesystem/files/galaxy-app
     dest: "{{ galaxyFS_base_dir }}"
   - src: roles/gvl.ansible.filesystem/files/galaxy-var/

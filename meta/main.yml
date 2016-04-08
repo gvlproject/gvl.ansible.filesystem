@@ -21,7 +21,7 @@ dependencies:
       galaxy_mutable_configs: "{{ gvl_galaxy_mutable_configs }}"
     }
   - { role: galaxyprojectdotorg.trackster, len_file_path: "{{ galaxy_len_file_path }}" }
-  - { role: galaxyprojectdotorg.cloudman-galaxy-setup }
+  - { role: galaxyprojectdotorg.cloudman-galaxy-setup, cmg_extra_files: "{{ gvl_cmg_extra_files }}" }
   - { role: galaxyprojectdotorg.galaxy-tools,
       galaxy_tools_create_bootstrap_user: yes,
       galaxy_tools_admin_user_password: "TODO-GenerateRandomOrDeleteBootstrapUser",

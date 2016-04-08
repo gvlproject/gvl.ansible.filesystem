@@ -20,7 +20,7 @@ done automatically):
 Variables
 ---------
 ##### Optional variables #####
-Note that some of these variables should match equaly named ones from the
+Note that some of these variables should match equally named ones from the
 [GVL playbook][gvlpb].
 
  - `galaxyFS_base_dir`: (default: `/mnt/galaxy`) the base path under which the
