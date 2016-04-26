@@ -19,6 +19,7 @@ dependencies:
   - { role: galaxyprojectdotorg.galaxy,
       galaxy_config: "{{ gvl_galaxy_config }}",
       galaxy_config_dir: "{{ gvl_galaxy_config_dir }}",
+      galaxy_shed_tool_conf_file: "{{ gvl_galaxy_shed_tool_conf_file }}",
       galaxy_mutable_configs: "{{ gvl_galaxy_mutable_configs }}"
     }
   - { role: galaxyprojectdotorg.trackster, len_file_path: "{{ galaxy_len_file_path }}" }
