@@ -27,7 +27,7 @@ gvl_galaxy_brand: "GVL {{ gvl_version }}"
 
 gvl_galaxy_config:
   "server:main":
-    port: "{{ galaxy_webserver_port }}"
+    port: 8080
     host: 127.0.0.1
   "app:main":
     filter-with: proxy-prefix
@@ -125,9 +125,8 @@ pulsar_optional_dependencies:
   - psutil
 
 # gvl setup details
-galaxy_git_repo: https://github.com/gvlproject/galaxy
-galaxy_changeset_id: "gvl_{{ gvl_version }}_alpha"
-galaxy_webserver_port: 8080
+gvl_galaxy_git_repo: https://github.com/gvlproject/galaxy
+gvl_galaxy_changeset_id: "gvl_{{ gvl_version }}_alpha"
 
 # gvl archive upload details
 gvl_create_archive: False

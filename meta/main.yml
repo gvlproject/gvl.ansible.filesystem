@@ -17,6 +17,9 @@ dependencies:
   - { role: gvl.ansible.filesystem.presetup, galaxy_shed_tools_dir: "{{ galaxyFS_base_dir }}/shed_tools" }
   - { role: galaxyprojectdotorg.cloudman-database }
   - { role: galaxyprojectdotorg.galaxy,
+      galaxy_vcs: "git",
+      galaxy_git_repo: "{{ gvl_galaxy_git_repo }}",
+      galaxy_changeset_id: "{{ gvl_galaxy_changeset_id }}",
       galaxy_config: "{{ gvl_galaxy_config }}",
       galaxy_config_dir: "{{ gvl_galaxy_config_dir }}",
       galaxy_shed_tool_conf_file: "{{ gvl_galaxy_shed_tool_conf_file }}",
