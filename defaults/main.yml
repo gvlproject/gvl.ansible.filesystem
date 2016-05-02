@@ -126,7 +126,7 @@ pulsar_optional_dependencies:
 
 # gvl setup details
 galaxy_git_repo: https://github.com/gvlproject/galaxy
-galaxy_changeset_id: gvl_{{ gvl_version }}
+galaxy_changeset_id: "gvl_{{ gvl_version }}_alpha"
 galaxy_webserver_port: 8080
 
 # gvl archive upload details

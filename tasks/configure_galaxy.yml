@@ -1,10 +1,8 @@
 - name: GVL Galaxy - Set genomespace urls to point to GVL versions
-  replace: dest="{{ galaxy_server_dir }}/{{ item }}" regexp="dm.genomespace.org" replace="{{ gvl_genomespace_server }}"
+  replace: dest="{{ galaxy_server_dir }}/{{ item }}" regexp="gsui.genomespace.org" replace="{{ gvl_genomespace_server }}"
   with_items:
-    - tools/genomespace/genomespace_exporter.py
-    - tools/genomespace/genomespace_file_browser.py
-    - tools/genomespace/genomespace_importer.py
-    - tools/genomespace/genomespace_file_browser_prod.xml
+    - client/galaxy/scripts/mvc/tool/tool-genomespace.js
+    - lib/galaxy/web/form_builder.py
 
 - name: GVL Galaxy - Set genomespace openid config to point to GVL Genomspace server
   replace: dest="{{ galaxy_server_dir }}/{{ item }}" regexp="identity.genomespace.org" replace="{{ gvl_genomespace_server }}"
