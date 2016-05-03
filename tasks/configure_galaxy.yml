@@ -17,7 +17,7 @@
     owner: "{{ galaxy_user_name }}"
 
 - name: Fetch GATK2
-  get_url: url="https://swift.rc.nectar.org.au:8888/v1/AUTH_2bb45090fdb74f8c81359fbe723e4ab5/alonie/GenomeAnalysisTK-2.8.jar" dest="{{ galaxyFS_base_dir }}/tools/gatk2/GenomeAnalysisTK.jar"
+  get_url: timeout=60 url="https://swift.rc.nectar.org.au:8888/v1/AUTH_2bb45090fdb74f8c81359fbe723e4ab5/alonie/GenomeAnalysisTK-2.8.jar" dest="{{ galaxyFS_base_dir }}/tools/gatk2/GenomeAnalysisTK.jar"
   sudo: yes
   sudo_user: "{{ galaxy_user_name }}"
 
