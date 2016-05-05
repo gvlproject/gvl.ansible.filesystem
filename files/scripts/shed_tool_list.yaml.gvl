@@ -292,6 +292,11 @@ tools:
   revision: 08affc5d2aef
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: count_gff_features
+  owner: devteam
+  revision: fabda887a71f
+  tool_panel_section_id: gatk
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # plots - Graph/Display Data
@@ -705,11 +710,6 @@ tools:
   revision: 592089499ae7
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: count_gff_features
-  owner: devteam
-  revision: fabda887a71f
-  tool_panel_section_id: gatk
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: depth_of_coverage
   owner: devteam
   revision: c3f08370fc82
@@ -928,11 +928,6 @@ tools:
   revision: 7b0708761d05
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: deseq_hts
-  owner: vipints
-  revision: cec4b4fb30be
-  tool_panel_section_id: ngs_rna_tools
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: htseq_bams_to_count_matrix
   owner: fubar
   revision: d300bc688e95
@@ -943,9 +938,9 @@ tools:
   revision: 3107df74056e
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
-- name: edger
-  owner: amawla
-  revision: a8a56766694e
+- name: deseq2
+  owner: iuc
+  revision: 248e9c78346e
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
