@@ -32,11 +32,11 @@
     </section>
     <section id="features" name="Extract Features" version="">
     </section>
-    <label id="statistics_and_visualisation" text="Statistics and Visualisation" version="" />
     <section id="fetchSeq" name="Fetch Sequences" version="">
     </section>
     <section id="fetchAlign" name="Fetch Alignments" version="">
     </section>
+    <label id="statistics_and_visualisation" text="Statistics and Visualisation" version="" />
     <section id="stats" name="Statistics" version="">
     </section>
     <section id="plots" name="Graph/Display Data" version="">
