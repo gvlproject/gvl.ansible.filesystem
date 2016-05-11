@@ -74,7 +74,7 @@ gvl_galaxy_config:
     ucsc_build_sites: "{{ galaxy_server_dir }}/tool-data/shared/ucsc/ucsc_build_sites.txt"
 
     brand: "{{ gvl_galaxy_brand }}"
-    support_url: https://genome.edu.au/wiki/GVL_Help
+    support_url: http://genome.edu.au/help
     ucsc_display_sites: main,test,archaea,ucla
     static_dir: "{{ galaxy_server_dir }}/static/"
     static_images_dir: "{{ galaxy_server_dir }}/static/images"
