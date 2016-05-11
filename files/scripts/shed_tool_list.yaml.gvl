@@ -203,16 +203,16 @@ tools:
 #---------------------------------------------------------------------
 # features - Extract Features
 
-
-######################################################################
-## STATISTICS AND VISUALISATION
-######################################################################
-
 #---------------------------------------------------------------------
 # fetchSeq - Fetch Sequences
 
 #---------------------------------------------------------------------
 # fetchAlign - Fetch Alignments
+
+
+######################################################################
+## STATISTICS AND VISUALISATION
+######################################################################
 
 #---------------------------------------------------------------------
 # stats - Statistics
@@ -938,6 +938,11 @@ tools:
   revision: 3107df74056e
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+- name: htseq_count
+  owner: lparsons
+  revision: a6dcb86af112
+  tool_panel_section_id: ngs_rna_tools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: deseq2
   owner: iuc
   revision: 248e9c78346e
