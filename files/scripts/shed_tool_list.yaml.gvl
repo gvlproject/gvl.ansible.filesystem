@@ -832,6 +832,11 @@ tools:
   revision: f83394a2c2da
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: cufflinks
+  owner: devteam
+  revision: a1ea9af8d5f4
+  tool_panel_section_id: ngs_rna_tools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: cuffdiff
   owner: devteam
   revision: 0f32ad418df8
@@ -857,9 +862,9 @@ tools:
   revision: b77178f66fc3
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: cufflinks
+- name: cummerbund
   owner: devteam
-  revision: a1ea9af8d5f4
+  revision: ba8fde59843d
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: filter_transcripts_via_tracking
