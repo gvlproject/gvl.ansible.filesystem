@@ -819,7 +819,7 @@ tools:
 
 - name: tophat2
   owner: devteam
-  revision: 4eb3c3beb9c7
+  revision: 758594ed0364
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: tophat_fusion_post
