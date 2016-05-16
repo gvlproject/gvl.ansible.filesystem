@@ -507,11 +507,6 @@ tools:
   revision: 890d97772e2a
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: samtools_sort
-  owner: iuc
-  revision: 38ea74bd4054
-  tool_panel_section_id: samtools
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: bcftools
   owner: iuc
   revision: e5e78d1e09a6
