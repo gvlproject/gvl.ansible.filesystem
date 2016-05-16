@@ -9,9 +9,9 @@ tools:
 #---------------------------------------------------------------------
 # getext - Get Data
 
-- name: ncbi_sra_toolkit
-  owner: matt-shirley
-  revision: ce2bb7841f17
+- name: sra_tools
+  owner: iuc
+  revision: b723c120161a
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
