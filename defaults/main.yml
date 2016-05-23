@@ -25,6 +25,10 @@ gvl_version: "4.1.0"
 gvl_fs_version: "{{ gvl_version }}"
 gvl_galaxy_brand: "GVL {{ gvl_version }}"
 
+
+#added by Simon so that it can be explicitly overridden by filesystem extensions such as the microgvl..
+gvl_galaxy_tools_tool_list_files: [ "roles/gvl.ansible.filesystem/files/scripts/shed_tool_list.yaml.gvl" ]
+
 gvl_galaxy_config:
   "server:main":
     port: 8080

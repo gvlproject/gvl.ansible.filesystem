@@ -32,5 +32,5 @@ dependencies:
       galaxy_tools_create_bootstrap_user: yes,
       galaxy_tools_admin_user_password: "TODO-GenerateRandomOrDeleteBootstrapUser",
       galaxy_tools_delete_bootstrap_user: yes,
-      galaxy_tools_tool_list_files: [ "roles/gvl.ansible.filesystem/files/scripts/shed_tool_list.yaml.gvl" ]
+      galaxy_tools_tool_list_files: "{{ gvl_galaxy_tools_tool_list_files }}"
     }
