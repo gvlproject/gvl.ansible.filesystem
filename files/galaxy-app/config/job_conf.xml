@@ -20,7 +20,7 @@
         <destination id="slurm_4slots" runner="slurm">
             <param id="nativeSpecification">--ntasks=4</param>
         </destination>
-        <destination id="slurn_8slots" runner="slurm">
+        <destination id="slurm_8slots" runner="slurm">
             <param id="nativeSpecification">--ntasks=8</param>
         </destination>
         <destination id="slurm_16slots" runner="slurm">
