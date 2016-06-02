@@ -69,11 +69,6 @@ tools:
   revision: 186b8d913e6c
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: bam_to_fastq
-  owner: brad-chapman
-  revision: 5a9ada9a3191
-  tool_panel_section_id: convert
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # bxops - Operate on Genomic Intervals
@@ -191,16 +186,6 @@ tools:
   revision: 586c1f0e1515
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: pearson_correlation
-  owner: devteam
-  revision: 302dcb834898
-  tool_panel_section_id: stats
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: lda_analysis
-  owner: devteam
-  revision: f0b6217f4a0c
-  tool_panel_section_id: stats
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: poisson2test
   owner: devteam
   revision: 5ff18ec88181
@@ -234,11 +219,6 @@ tools:
 - name: plot_from_lda
   owner: devteam
   revision: 08affc5d2aef
-  tool_panel_section_id: stats
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: count_gff_features
-  owner: devteam
-  revision: fabda887a71f
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
@@ -507,11 +487,6 @@ tools:
   revision: 890d97772e2a
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: bcftools
-  owner: iuc
-  revision: e5e78d1e09a6
-  tool_panel_section_id: samtools
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: samtool_filter2
   owner: devteam
   revision: c31a37f6d48a
@@ -550,19 +525,9 @@ tools:
   revision: 23436d1d0fa1
   tool_panel_section_id: ngs_vcf_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: vcftools_merge
-  owner: devteam
-  revision: 71e19ddf52f5
-  tool_panel_section_id: ngs_vcf_tools
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: vcftools_isec
   owner: devteam
   revision: aa232e38338f
-  tool_panel_section_id: ngs_vcf_tools
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-- name: vcftools_compare
-  owner: devteam
-  revision: ad50c257e758
   tool_panel_section_id: ngs_vcf_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: vcftools_slice
