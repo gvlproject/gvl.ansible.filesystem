@@ -11,7 +11,7 @@ tools:
 
 - name: sra_tools
   owner: iuc
-  revision: b723c120161a
+  revision: 462ee06c9358
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
