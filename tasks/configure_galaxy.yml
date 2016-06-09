@@ -34,8 +34,13 @@
   sudo: yes
   sudo_user: "{{ galaxy_user_name }}"
 
-# Install mako to satisfy proportional venn
-- name: Install mako lib to satisfy proportional venn
-  pip: name=mako virtualenv="{{ galaxy_venv_dir }}"
+- name: Install additional python libs into Galaxy's venv to satisfy some Galaxy tools
   sudo: yes
   sudo_user: "{{ galaxy_user_name }}"
+  pip: name="{{ item }}" virtualenv="{{ galaxy_venv_dir }}"
+  with_items:
+    # Install mako to satisfy proportional venn
+    - mako
+    # https://overv.io/gvlproject/gvl.ansible.playbook/issues/16/
+    - mako
+    - http://prdownloads.sourceforge.net/gnuplot-py/gnuplot-py-1.8.tar.gz?download
