@@ -7,14 +7,6 @@ tools:
 ######################################################################
 
 #---------------------------------------------------------------------
-# getext - Get Data
-
-- name: sra_tools
-  owner: iuc
-  revision: 462ee06c9358
-  tool_panel_section_id: getext
-  tool_shed_url: https://toolshed.g2.bx.psu.edu
-#---------------------------------------------------------------------
 # textutil - Text Manipulation
 
 - name: column_maker
