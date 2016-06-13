@@ -138,11 +138,16 @@ gvl_create_archive: False
 # cloudman_bucket_name: cm-ng-dev
 gvl_fs_archive_name: "gvl-galaxyfs-{{ gvl_version }}.tar.gz"
 gvl_fs_archive_path: /mnt/galaxy_archive
+gvl_swift_upload: False
 OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/
 # OS_TENANT_ID:
 # OS_TENANT_NAME:
 # OS_USERNAME:
 # OS_PASSWORD:
+
+gvl_s3_upload: False
+# AWS_ACCESS_KEY
+# AWS_SECRET_KEY
 
 gvl_cmg_extra_files:
   - src: roles/gvl.ansible.filesystem/files/galaxy-app
