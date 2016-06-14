@@ -55,10 +55,10 @@ To use the role, wrap it into a playbook file called `playbook.yml` as follows
 `roles/galaxyprojectdotorg.cloudman-galaxy-setup`):
 
     - hosts: gvl-filesystem-hosts
-      sudo: yes
+      become: yes
       roles:
         - role: gvl.ansible.filesystem
-          sudo_user: "{{ galaxy_user_name }}"
+          become_user: "{{ galaxy_user_name }}"
 
 Next, create a `hosts` file:
 
