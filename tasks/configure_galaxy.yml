@@ -44,3 +44,8 @@
     # https://overv.io/gvlproject/gvl.ansible.playbook/issues/16/
     - mako
     - http://prdownloads.sourceforge.net/gnuplot-py/gnuplot-py-1.8.tar.gz?download
+    
+- name: "Force rpy to use correct version of R (issue: https://github.com/gvlproject/gvl.ansible.playbook/issues/39)" 
+  lineinfile: dest="{{ galaxyFS_base_dir }}/tools/rpy/1.0.3/devteam/package_rpy_1_0_3/82170c94ca7c/env.sh" line='. /mnt/galaxy/tools/R/2.11.0/devteam/package_r_2_11_0/5824d2b3bc8b/env.sh'
+  become: yes
+  become_user: "{{ galaxy_user_name }}"
