@@ -136,7 +136,7 @@ gvl_galaxy_changeset_id: "gvl_{{ gvl_version }}_alpha"
 # gvl archive upload details
 gvl_create_archive: yes
 cloudman_bucket_name: cm-gcc2016
-gvl_fs_archive_name: "gcc2016-galaxyfs-{{ gvl_version }}.tar.gz"
+gvl_fs_archive_name: "gcc2016-galaxyFS-{{ run_timestamp.stdout }}.tar.gz"
 gvl_fs_archive_path: /mnt/galaxy_archive
 gvl_swift_upload: False
 OS_AUTH_URL: https://keystone.rc.nectar.org.au:5000/v2.0/

@@ -1,3 +1,6 @@
+- shell: 'date +%Y%m%d%H%M%S'
+  register: run_timestamp
+
 #- include: configure_galaxy.yml
 #  when: cm_setup_galaxy
 
