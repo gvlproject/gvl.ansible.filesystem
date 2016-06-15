@@ -36,7 +36,7 @@ gvl_galaxy_config:
   "app:main":
     filter-with: proxy-prefix
     database_connection: postgresql://{{ galaxy_user_name }}@localhost:{{ galaxy_db_port }}/galaxy
-    install_database_connection: postgresql://{{ galaxy_user_name }}@localhost:{{ galaxy_db_port }}/galaxy
+    install_database_connection: sqlite:///{{ gvl_galaxy_mutable_config_dir }}/galaxy_install_db.sqlite?isolation_level=IMMEDIATE
     database_engine_option_pool_size: 20
     database_engine_option_max_overflow: 50
     database_engine_option_server_side_cursors: True
