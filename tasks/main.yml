@@ -5,3 +5,4 @@
 
 - include: create_archive.yml
   when: gvl_create_archive
+  tags: create_archive
