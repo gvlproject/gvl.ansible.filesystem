@@ -49,3 +49,14 @@
   lineinfile: dest="{{ galaxyFS_base_dir }}/tools/rpy/1.0.3/devteam/package_rpy_1_0_3/82170c94ca7c/env.sh" line='. /mnt/galaxy/tools/R/2.11.0/devteam/package_r_2_11_0/5824d2b3bc8b/env.sh'
   become: yes
   become_user: "{{ galaxy_user_name }}"
+
+- name: Set GATK 1.4 to use Java 7
+  lineinfile: dest="{{ galaxyFS_base_dir }}/tools/gatk/1.4/devteam/package_gatk_1_4/ec95ec570854/env.sh" line='PATH=/usr/lib/jvm/java-7-oracle/jre/bin/:$PATH; export PATH'
+  become: yes
+  become_user: "{{ galaxy_user_name }}"
+
+- name: Set GATK 2.8 to use Java 7
+  lineinfile: dest="{{ galaxyFS_base_dir }}/tools/environment_settings/GATK2_PATH/iuc/gatk2/84584664264c/env.sh" line='PATH=/usr/lib/jvm/java-7-oracle/jre/bin/:$PATH; export PATH'
+  become: yes
+  become_user: "{{ galaxy_user_name }}"
+
