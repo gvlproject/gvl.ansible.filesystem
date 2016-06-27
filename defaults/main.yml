@@ -131,7 +131,7 @@ pulsar_optional_dependencies:
 
 # gvl setup details
 gvl_galaxy_git_repo: https://github.com/gvlproject/galaxy
-gvl_galaxy_changeset_id: "gvl_{{ gvl_version }}_alpha"
+gvl_galaxy_changeset_id: "gvl_{{ gvl_version }}"
 
 # gvl archive upload details
 gvl_create_archive: yes
