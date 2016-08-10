@@ -225,6 +225,11 @@ tools:
 #---------------------------------------------------------------------
 # plots - Graph/Display Data
 
+- name: jbrowse
+  owner: iuc
+  revision: 1e74f16adaa1
+  tool_panel_section_id: plots
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: gmaj
   owner: devteam
   revision: 2cd5ee197ec7
