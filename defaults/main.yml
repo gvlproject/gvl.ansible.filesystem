@@ -68,7 +68,7 @@ gvl_galaxy_config:
     shed_tool_data_path: "{{ indicesFS_base_dir }}/tool-data/dm"
     galaxy_data_manager_data_path: "{{ galaxy_genome_data_path }}"
 
-    tool_config_file: "{{ gvl_galaxy_config_dir }}/tool_conf.xml.sample,{{ gvl_galaxy_config_dir }}/shed_tool_conf_cloud.xml,{{ galaxy_shed_tool_conf_file }}"
+    tool_config_file: "{{ gvl_galaxy_config_dir }}/tool_conf.xml.sample,{{ gvl_galaxy_config_dir }}/shed_tool_conf.xml,{{ galaxy_shed_tool_conf_file }}"
     tool_data_table_config_path: "{{ gvl_galaxy_config_dir }}/tool_data_table_conf.xml"
     datatypes_config_file: "{{ gvl_galaxy_config_dir }}/datatypes_conf.xml.sample"
     migrated_tools_config: "{{ gvl_galaxy_mutable_config_dir }}/migrated_tools_conf.xml"
