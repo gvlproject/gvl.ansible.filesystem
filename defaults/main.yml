@@ -115,20 +115,6 @@ gvl_galaxy_mutable_configs:
   - src: "{{ galaxy_server_dir }}/config/tool_sheds_conf.xml.sample"
     dest: "{{ gvl_galaxy_config['app:main']['tool_sheds_config_file'] }}"
 
-#-- Pulsar configs
-pulsar_server_dir: "{{ galaxyFS_base_dir }}/pulsar"
-pulsar_dependencies_dir: "{{ galaxyFS_base_dir }}/tools"
-pulsar_drmaa_library_path: /usr/lib/slurm-drmaa/lib/libdrmaa.so
-pulsar_host: "0.0.0.0"
-pulsar_optional_dependencies:
-  - pyOpenSSL
-  - pycurl==7.19.3.1 # https://github.com/pycurl/pycurl/issues/201
-  - uwsgi
-  - drmaa
-  - requests
-  - poster
-  - psutil
-
 # gvl setup details
 gvl_galaxy_git_repo: https://github.com/gvlproject/galaxy
 gvl_galaxy_changeset_id: "gvl_{{ gvl_version }}"
