@@ -88,6 +88,7 @@ gvl_galaxy_config:
     allow_user_deletion: True
     expose_dataset_path: True
     visualization_plugins_directory: config/plugins/visualizations
+    conda_auto_init: True
 
   "filter:gzip":
     use: egg:Paste#gzip
