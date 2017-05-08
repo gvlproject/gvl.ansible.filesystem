@@ -667,7 +667,6 @@ tools:
 #---------------------------------------------------------------------
 # snpeff - snpEff
 
-
 #---------------------------------------------------------------------
 # multiple_regression - Multiple regression
 
@@ -1107,6 +1106,18 @@ tools:
   - b9971bca4b01
   tool_panel_section_id: metagenomics
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: vsearch
+  owner: iuc
+  revisions:
+  - 576963db5f1b
+  tool_panel_section_id: metagenomics
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  - name: suite_biom_format
+    owner: iuc
+    revisions:
+    - 8eda049e45c2
+    tool_panel_section_id: convert
+    tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # typing - Typing
