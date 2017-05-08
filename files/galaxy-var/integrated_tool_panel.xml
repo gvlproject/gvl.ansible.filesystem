@@ -91,4 +91,6 @@
     </section>
     <section id="metagenomics" name="Metagenomic analyses" version="">
     </section>
+    <section id="typing" name="Bacterial Typing" version="">
+    </section>
 </toolbox>

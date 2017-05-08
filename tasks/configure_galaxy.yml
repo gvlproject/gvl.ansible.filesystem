@@ -9,30 +9,33 @@
   with_items:
     - openid/genomespace.xml
 
-- name: Create tool folder for GATK2
-  file:
-    path: '{{ galaxyFS_base_dir }}/tools/gatk2'
-    state: 'directory'
-    mode: '0755'
-    owner: "{{ galaxy_user_name }}"
+- name: GVL Galaxy - Rebuild Galaxy client
+  shell: executable=/bin/bash make client chdir="{{ galaxy_server_dir }}"
 
-- name: Fetch GATK2
-  get_url: timeout=60 url="https://swift.rc.nectar.org.au:8888/v1/AUTH_2bb45090fdb74f8c81359fbe723e4ab5/alonie/GenomeAnalysisTK-2.8.jar" dest="{{ galaxyFS_base_dir }}/tools/gatk2/GenomeAnalysisTK.jar"
-  become: yes
-  become_user: "{{ galaxy_user_name }}"
+#- name: Create tool folder for GATK2
+#  file:
+#    path: '{{ galaxyFS_base_dir }}/tools/gatk2'
+#    state: 'directory'
+#    mode: '0755'
+#    owner: "{{ galaxy_user_name }}"
 
-- name: Set GATK2 Path
-  shell: executable=/bin/bash echo 'GATK2_PATH={{ galaxyFS_base_dir }}/tools/gatk2; export GATK2_PATH' > /mnt/galaxy/tools/environment_settings/GATK2_PATH/iuc/gatk2/*/env.sh
-  become: yes
-  become_user: "{{ galaxy_user_name }}"
+#- name: Fetch GATK2
+#  get_url: timeout=60 url="https://swift.rc.nectar.org.au:8888/v1/AUTH_2bb45090fdb74f8c81359fbe723e4ab5/alonie/GenomeAnalysisTK-2.8.jar" dest="{{ galaxyFS_base_dir }}/tools/gatk2/GenomeAnalysisTK.jar"
+#  become: yes
+#  become_user: "{{ galaxy_user_name }}"
+
+#- name: Set GATK2 Path
+#  shell: executable=/bin/bash echo 'GATK2_PATH={{ galaxyFS_base_dir }}/tools/gatk2; export GATK2_PATH' > /mnt/galaxy/tools/environment_settings/GATK2_PATH/iuc/gatk2/*/env.sh
+#  become: yes
+#  become_user: "{{ galaxy_user_name }}"
 
 # Patch up all bowtie2 executable paths so that there's a bowtie2-align executable in each (tophat2 looks for the bowtie2-align executable when running with modules on the commandline)
-- name: Patchup bowtie2 executable paths so they work with tophat2 and modules
-  shell: executable=/bin/bash cd {{ item }}/*/package*/*/; ln -s bowtie2 bowtie2-align
-  with_fileglob:
-    - "{{ galaxyFS_base_dir }}/tools/bowtie2/*"
-  become: yes
-  become_user: "{{ galaxy_user_name }}"
+#- name: Patchup bowtie2 executable paths so they work with tophat2 and modules
+#  shell: executable=/bin/bash cd {{ item }}/*/package*/*/; ln -s bowtie2 bowtie2-align
+#  with_fileglob:
+#    - "{{ galaxyFS_base_dir }}/tools/bowtie2/*"
+#  become: yes
+#  become_user: "{{ galaxy_user_name }}"
 
 - name: Install additional python libs into Galaxy's venv to satisfy some Galaxy tools
   become: yes
@@ -43,20 +46,20 @@
     - mako
     # https://overv.io/gvlproject/gvl.ansible.playbook/issues/16/
     - mako
-    - http://prdownloads.sourceforge.net/gnuplot-py/gnuplot-py-1.8.tar.gz?download
+#    - http://prdownloads.sourceforge.net/gnuplot-py/gnuplot-py-1.8.tar.gz?download
     
-- name: "Force rpy to use correct version of R (issue: https://github.com/gvlproject/gvl.ansible.playbook/issues/39)" 
-  lineinfile: dest="{{ galaxyFS_base_dir }}/tools/rpy/1.0.3/devteam/package_rpy_1_0_3/82170c94ca7c/env.sh" line='. /mnt/galaxy/tools/R/2.11.0/devteam/package_r_2_11_0/5824d2b3bc8b/env.sh'
-  become: yes
-  become_user: "{{ galaxy_user_name }}"
+#- name: "Force rpy to use correct version of R (issue: https://github.com/gvlproject/gvl.ansible.playbook/issues/39)" 
+#  lineinfile: dest="{{ galaxyFS_base_dir }}/tools/rpy/1.0.3/devteam/package_rpy_1_0_3/82170c94ca7c/env.sh" line='. /mnt/galaxy/tools/R/2.11.0/devteam/package_r_2_11_0/5824d2b3bc8b/env.sh'
+#  become: yes
+#  become_user: "{{ galaxy_user_name }}"
 
-- name: Set GATK 1.4 to use Java 7
-  lineinfile: dest="{{ galaxyFS_base_dir }}/tools/gatk/1.4/devteam/package_gatk_1_4/ec95ec570854/env.sh" line='PATH=/usr/lib/jvm/java-7-oracle/jre/bin/:$PATH; export PATH'
-  become: yes
-  become_user: "{{ galaxy_user_name }}"
+#- name: Set GATK 1.4 to use Java 7
+#  lineinfile: dest="{{ galaxyFS_base_dir }}/tools/gatk/1.4/devteam/package_gatk_1_4/ec95ec570854/env.sh" line='PATH=/usr/lib/jvm/java-7-oracle/jre/bin/:$PATH; export PATH'
+#  become: yes
+#  become_user: "{{ galaxy_user_name }}"
 
-- name: Set GATK 2.8 to use Java 7
-  lineinfile: dest="{{ galaxyFS_base_dir }}/tools/environment_settings/GATK2_PATH/iuc/gatk2/84584664264c/env.sh" line='PATH=/usr/lib/jvm/java-7-oracle/jre/bin/:$PATH; export PATH'
-  become: yes
-  become_user: "{{ galaxy_user_name }}"
+#- name: Set GATK 2.8 to use Java 7
+#  lineinfile: dest="{{ galaxyFS_base_dir }}/tools/environment_settings/GATK2_PATH/iuc/gatk2/84584664264c/env.sh" line='PATH=/usr/lib/jvm/java-7-oracle/jre/bin/:$PATH; export PATH'
+#  become: yes
+#  become_user: "{{ galaxy_user_name }}"
 
