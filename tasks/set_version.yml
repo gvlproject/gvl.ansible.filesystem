@@ -23,3 +23,8 @@
   copy: src=scripts/poststart.d/ dest={{ galaxyFS_base_dir }}/gvl/poststart.d/ mode=0755 owner="ubuntu"
   become: yes
   become_user: root
+  
+- name: GVL FS - Copy script that enables optional commandline system
+  template: src=copy_modules.j2 dest={{ galaxyFS_base_dir }}/gvl/poststart.d/copy_modules mode=0755
+  become: yes
+  become_user: root

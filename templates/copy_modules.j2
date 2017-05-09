@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Bash script to copy the modules files from the other_tools directory into /usr/share/modules/modulesfiles..
+#
+# Simon Gladman - 2015 - VLSCI
+# Part of the Microbial GVL project.
+
+if [ -d "{{ gvl_app_path }}/scripts/modulefiles" ]
+then
+  sudo cp -r {{ gvl_app_path }}/scripts/modulefiles/* /usr/share/modules/modulefiles/
+else
+  printf "No modules files to copy across."
+fi
+
+if [ -f "{{ gvl_app_path }}/scripts/linuxbrew-paths.sh" ]
+then
+  sudo cp {{ gvl_app_path }}/scripts/linuxbrew-paths.sh /etc/profile.d/
+else
+  printf "Linuxbrew paths file not found"
+fi
+
+if [ -f "{{ gvl_app_path }}/scripts/system-ansible.yml" ]
+then
+  /usr/bin/python /usr/local/bin/ansible-playbook -vvv /mnt/gvl/apps/scripts/system-ansible.yml
+else
+  printf  "System ansible script not found."
+fi
+
+run-parts /opt/gvl/scripts/triggers
