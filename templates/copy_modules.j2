@@ -19,7 +19,7 @@ else
   printf "Linuxbrew paths file not found"
 fi
 
-if[ -f "/etc/ansible/ansible.cfg" ]
+if [ -f "/etc/ansible/ansible.cfg" ]
 then
   sudo sed -i.bak -r "s/^#remote_tmp.*$/remote_tmp = \/mnt\/galaxy\/tmp/" /etc/ansible/ansible.cfg
 else
