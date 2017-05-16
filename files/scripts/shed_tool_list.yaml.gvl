@@ -757,6 +757,11 @@ tools:
   revision: 6eeacf19a38e
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: trim_galore
+  owner: bgruening
+  revision: 80cd83b11214
+  tool_panel_section_id: ngs_qc
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 
 #---------------------------------------------------------------------
 # ngs_mapping - NGS: Mapping
@@ -808,6 +813,11 @@ tools:
 #---------------------------------------------------------------------
 # ngs_rna_tools - NGS: RNA Analysis
 
+- name: hisat2
+  owner: iuc
+  revision: 2ec097c8e843
+  tool_panel_section_id: ngs_rna_tools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: tophat2
   owner: devteam
   revision: 16c4255042be
@@ -892,6 +902,11 @@ tools:
 - name: suite_trinity
   owner: iuc
   revision: 0de8c585b1cb
+  tool_panel_section_id: ngs_rna_tools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: stringtie
+  owner: iuc
+  revision: c84d44519b2e
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 
@@ -1146,6 +1161,11 @@ tools:
 - name: data_manager_bowtie2_index_builder
   owner: devteam
   revision: 9bf4eb559ed5
+  tool_panel_section_id: getext
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: data_manager_hisat2_index_builder
+  owner: iuc
+  revision: d210e1f185bd
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: data_manager_gatk_picard_index_builder
