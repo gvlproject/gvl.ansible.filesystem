@@ -14,6 +14,7 @@ tools:
   revision: 30775c836c77
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # send - Send Data
@@ -29,11 +30,13 @@ tools:
   revision: 626658afe4cb
   tool_panel_section_id: textutil
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: condense_characters
   owner: devteam
   revision: 381ed54c5e39
   tool_panel_section_id: textutil
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # filter - Filter and Sort
@@ -49,26 +52,31 @@ tools:
   revision: 0b4e36026794
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: tabular_to_fastq
   owner: devteam
   revision: 92034dcbb40a
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fasta_to_tabular
   owner: devteam
   revision: 7e801ab2b70e
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_to_tabular
   owner: devteam
   revision: 7da7ddea4425
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_to_fasta
   owner: devteam
   revision: 186b8d913e6c
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # bxops - Operate on Genomic Intervals
@@ -78,66 +86,79 @@ tools:
   revision: 765ceb06c3e2
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: flanking_features
   owner: devteam
   revision: 8307665c4b6c
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: get_flanks
   owner: devteam
   revision: 4cd116158aef
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: subtract_query
   owner: devteam
   revision: 960d5d114184
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: join
   owner: devteam
   revision: ffbd1de29c28
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: concat
   owner: devteam
   revision: d491589307e7
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: subtract
   owner: devteam
   revision: 7a2a604ae9c8
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: complement
   owner: devteam
   revision: e0a23ab32d7f
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: intersect
   owner: devteam
   revision: 8ddabc73af92
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: coverage
   owner: devteam
   revision: bc9c66c1e9c9
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: basecoverage
   owner: devteam
   revision: 0a3e3133b09d
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: merge
   owner: devteam
   revision: 0926c81f382c
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: annotation_profiler
   owner: devteam
   revision: 3b33da018e74
   tool_panel_section_id: bxops
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # features - Extract Features
@@ -161,72 +182,86 @@ tools:
   revision: cb422b6f49d2
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: dwt_var_perfeature
   owner: devteam
   revision: cb1c59d69557
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: compute_motifs_frequency
   owner: devteam
   revision: 1f8ee7f9701b
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: generate_pc_lda_matrix
   owner: devteam
   revision: 04cdbd00dcec
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: dwt_cor_avb_all
   owner: devteam
   revision: 8564f6927b87
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: categorize_elements_satisfying_criteria
   owner: devteam
   revision: 586c1f0e1515
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: poisson2test
   owner: devteam
   revision: 5ff18ec88181
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: t_test_two_samples
   owner: devteam
   revision: c2ffc9885b5a
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: compute_motif_frequencies_for_all_motifs
   owner: devteam
   revision: 5319efa51514
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: correlation
   owner: devteam
   revision: 24e01abf9e34
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: dwt_cor_ava_perclass
   owner: devteam
   revision: a0defff5cf89
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: dwt_ivc_all
   owner: devteam
   revision: 0b89b03ad760
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: plot_from_lda
   owner: devteam
   revision: 08affc5d2aef
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: count_gff_features
   owner: devteam
   revisions:
   - fabda887a71f
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # plots - Graph/Display Data
@@ -236,52 +271,62 @@ tools:
   revision: 69c5e9c0add0
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: gmaj
   owner: devteam
   revision: 2cd5ee197ec7
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_quality_boxplot
   owner: devteam
   revision: f95284aa2946
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: weblogo3
   owner: devteam
   revision: c1a9e644d580
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: prop_venn
   owner: idot
   revision: cc6707a1e044
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: xy_plot
   owner: devteam
   revision: 319fa5a9fc1b
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: draw_stacked_barplots
   owner: devteam
   revision: e997b710e38a
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: histogram
   owner: devteam
   revision: cdb9e89e2970
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: scatterplot
   owner: devteam
   revision: 4f8b9e70fda0
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: mummer
   owner: peterjc
   revisions:
   - 683ea5ab0008
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 
 ######################################################################
@@ -296,111 +341,133 @@ tools:
   revision: f666895cbebd
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastx_barcode_splitter
   owner: devteam
   revision: 8abdedf55101
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastx_reverse_complement
   owner: devteam
   revision: e246088b6e34
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastx_artifacts_filter
   owner: devteam
   revision: 09070cacefd8
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fasta_formatter
   owner: devteam
   revision: 9457a20156db
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastx_quality_statistics
   owner: devteam
   revision: 7306ec78632a
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastx_clipper
   owner: devteam
   revision: bdf1ce174e39
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastx_collapser
   owner: devteam
   revision: 421f0af4ee95
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastx_renamer
   owner: devteam
   revision: 02f8a17a4ebd
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_quality_filter
   owner: devteam
   revision: e41385662e5e
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_quality_boxplot
   owner: devteam
   revision: f95284aa2946
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastx_nucleotides_distribution
   owner: devteam
   revision: 18a51655db17
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_quality_converter
   owner: devteam
   revision: 74db4cffab1f
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastx_trimmer
   owner: devteam
   revision: 377ac2829eac
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fasta_nucleotide_changer
   owner: devteam
   revision: f81d4362b6c1
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fasta_extract
   owner: simon-gladman
   revision: 5dfc014a8b3a
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fasta_stats
   owner: simon-gladman
   revision: 20ca2574216a
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fasta_concatenate_by_species
   owner: devteam
   revision: 717aee069681
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: split_paired_reads
   owner: devteam
   revision: 36163bff76cc
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fasta_compute_length
   owner: devteam
   revision: de2db1bdfbf8
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: clustalw
   owner: devteam
   revision: f8aad74cc8c1
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fasta_filter_by_length
   owner: devteam
   revision: c8cd0a03db49
   tool_panel_section_id: fasta_manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # ngs_picard - NGS: Picard
@@ -410,6 +477,7 @@ tools:
   revision: fc288950c3b7
   tool_panel_section_id: ngs_picard
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # samtools - NGS: SAM Tools
@@ -419,106 +487,127 @@ tools:
   revision: bb40e4252392
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: bam_to_sam
   owner: devteam
   revision: af7c50162f0b
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtools_sort
   owner: devteam
   revision: a430da4f04cd
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtools_calmd
   owner: devteam
   revision: 1ebb4ecdc1ef
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtools_slice_bam
   owner: devteam
   revision: 2b474ebbfc7d
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtools_bedcov
   owner: devteam
   revision: 8c3472790020
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtools_stats
   owner: devteam
   revision: 8cfc17e27132
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtools_split
   owner: devteam
   revision: 57f3e32f809d
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtools_reheader
   owner: devteam
   revision: 020e144b5f78
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: sam_to_bam
   owner: devteam
   revision: 881e16ad05c6
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtools_flagstat
   owner: devteam
   revision: 0072bf593791
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtools_idxstats
   owner: devteam
   revision: 87398ae795c7
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtools_mpileup
   owner: devteam
   revision: bfc4517aa037
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: pileup_interval
   owner: devteam
   revision: ef11139d4545
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtools_phase
   owner: devteam
   revision: 8bfe0d1616d2
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: sam2interval
   owner: devteam
   revision: 8c737b8ddc45
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: sam_bitwise_flag_filter
   owner: devteam
   revision: 0b2424a404d9
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: sam_pileup
   owner: devteam
   revision: 890d97772e2a
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: samtool_filter2
   owner: devteam
   revision: b7aa423007bf
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: sam_merge
   owner: devteam
   revision: 1977f1637890
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: pileup_parser
   owner: devteam
   revision: 85bedbea8a12
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # bed_tools - BED tools
@@ -528,6 +617,7 @@ tools:
   revision: fadebae7e69b
   tool_panel_section_id: bed_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # ngs_vcf_tools - NGS: VCF Manipulation
@@ -537,21 +627,25 @@ tools:
   revision: 57a6550df582
   tool_panel_section_id: ngs_vcf_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: vcftools_subset
   owner: devteam
   revision: 23436d1d0fa1
   tool_panel_section_id: ngs_vcf_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: vcftools_isec
   owner: devteam
   revision: aa232e38338f
   tool_panel_section_id: ngs_vcf_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: vcftools_slice
   owner: devteam
   revision: 1363e5d4a8b8
   tool_panel_section_id: ngs_vcf_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # gatk - NGS: GATK1.4 Tools
@@ -561,81 +655,97 @@ tools:
   revision: 227aa321a671
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: analyze_covariates
   owner: devteam
   revision: 738bc749f9a3
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: variant_combine
   owner: devteam
   revision: 1a6e16391727
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: print_reads
   owner: devteam
   revision: a8b94864fe35
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: indel_realigner
   owner: devteam
   revision: bb0beda6cf83
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: variant_apply_recalibration
   owner: devteam
   revision: 350a4d0d1678
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: realigner_target_creator
   owner: devteam
   revision: 5b8eaae854da
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: table_recalibration
   owner: devteam
   revision: 30e1dd77e99c
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: variant_filtration
   owner: devteam
   revision: da6e2503c62d
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: variant_recalibrator
   owner: devteam
   revision: cb7cf57397a7
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: variants_validate
   owner: devteam
   revision: 7e1ecaa64370
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: variant_eval
   owner: devteam
   revision: fbca1c0956d2
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: unified_genotyper
   owner: devteam
   revision: 66dd4d4c1743
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: variant_annotator
   owner: devteam
   revision: ae9d0a543e9b
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: windowsplitter
   owner: devteam
   revision: 592089499ae7
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: depth_of_coverage
   owner: devteam
   revision: c3f08370fc82
   tool_panel_section_id: gatk
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # gatk2 - NGS: GATK2.8 Tools
@@ -645,6 +755,7 @@ tools:
   revision: 84584664264c
   tool_panel_section_id: gatk2
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # emboss - EMBOSS
@@ -654,6 +765,7 @@ tools:
   revision: 1b6538ec8b56
   tool_panel_section_id: emboss
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # blast+ - Blast +
@@ -663,6 +775,7 @@ tools:
   revision: 7538e2bfcd41
   tool_panel_section_id: blast+
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # snpeff - snpEff
@@ -692,76 +805,91 @@ tools:
   revision: 25c24379693a
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_filter
   owner: devteam
   revision: b957f55f3955
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_combiner
   owner: devteam
   revision: e711d52c7509
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_paired_end_deinterlacer
   owner: devteam
   revision: f0949bc49926
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_groomer
   owner: devteam
   revision: e4d28c94242d
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_manipulation
   owner: devteam
   revision: bb07615a5b6a
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_paired_end_interlacer
   owner: devteam
   revision: ec6ddf449651
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_paired_end_splitter
   owner: devteam
   revision: c80bce242eec
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_masker_by_quality
   owner: devteam
   revision: 9d234265981e
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_paired_end_joiner
   owner: devteam
   revision: 6a7f5da7c76d
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_stats
   owner: devteam
   revision: daaf552153fe
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastq_trimmer
   owner: devteam
   revision: e0cfb5a703ce
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: fastqc
   owner: devteam
   revision: db2dc6bc8f05
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: trimmomatic
   owner: pjbriggs
   revision: 6eeacf19a38e
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: trim_galore
   owner: bgruening
   revision: 80cd83b11214
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # ngs_mapping - NGS: Mapping
@@ -772,22 +900,26 @@ tools:
   - 53646aaaafef
   tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: bowtie2
   owner: devteam
   revisions:
   - 937aa69e715f
   tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: lastz
   owner: devteam
   revision: 60afcc2c1d05
   tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: lastz_paired_reads
   owner: devteam
   revision: ecc974513241
   tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # ngs_assembly - NGS: Assembly
@@ -797,18 +929,21 @@ tools:
   revision: d81360ea69d8
   tool_panel_section_id: ngs_assembly
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: pilon
   owner: iuc
   revisions:
   - 11e5408fd238
   tool_panel_section_id: ngs_assembly
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: spades
   owner: nml
   revisions:
   - 909c315b656d
   tool_panel_section_id: ngs_assembly
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # ngs_rna_tools - NGS: RNA Analysis
@@ -818,97 +953,116 @@ tools:
   revision: 2ec097c8e843
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: tophat2
   owner: devteam
   revision: 16c4255042be
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: tophat_fusion_post
   owner: devteam
   revision: f83394a2c2da
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: cufflinks
   owner: devteam
   revision: e04dbae2abe0
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: cuffdiff
   owner: devteam
   revision: d3ae7d9c2202
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: cuffquant
   owner: devteam
   revision: 6dc45faebc1d
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: cuffnorm
   owner: devteam
   revision: f5b2ee725d34
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: cuffmerge
   owner: devteam
   revision: cf747d1bd79a
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: cuffcompare
   owner: devteam
   revision: e66b9b5b8580
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: cummerbund
   owner: devteam
   revision: 78fcfc04fcfe
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: filter_transcripts_via_tracking
   owner: devteam
   revision: 45f89dcf0b4c
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: express
   owner: devteam
   revision: 7b0708761d05
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: htseq_bams_to_count_matrix
   owner: fubar
   revision: d300bc688e95
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: differential_count_models
   owner: fubar
   revision: 3107df74056e
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://testtoolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: htseq_count
   owner: lparsons
   revision: 620d5603d1a8
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: deseq2
   owner: iuc
   revision: 6f91b8ce6e07
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: salmon
   owner: bgruening
   revisions:
   - 1b22d8a18acc
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: suite_trinity
   owner: iuc
   revision: 0de8c585b1cb
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: stringtie
   owner: iuc
   revision: c84d44519b2e
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # peak_calling - NGS: Peak Calling
@@ -918,26 +1072,31 @@ tools:
 #  revision: 23b22c1692fa
 #  tool_panel_section_id: peak_calling
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: idr_package
 #  owner: modencode-dcc
 #  revision: 6f6a9fbe264e
 #  tool_panel_section_id: peak_calling
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: ccat
 #  owner: devteam
 #  revision: a0c8dc671a23
 #  tool_panel_section_id: peak_calling
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: macs2
 #  owner: iuc
 #  revision: 859c982b1f7f
 #  tool_panel_section_id: peak_calling
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: sicer
 #  owner: devteam
 #  revision: 82a8234e03f2
 #  tool_panel_section_id: peak_calling
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # ngs_variant_detection - NGS: Variant Detection
@@ -950,47 +1109,56 @@ tools:
   revision: bc1e0cd41241
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: freebayes
   owner: devteam
   revision: bf27106652f3
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: vcf_filter
   owner: devteam
   revision: da1a6f33b504
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: vcf_annotate
   owner: devteam
   revision: b001b50f2009
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: vcf_intersect
   owner: devteam
   revision: 9d162bde4113
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: vcf_extract
   owner: devteam
   revision: 76ad0b7865b9
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: snpfreq
   owner: devteam
   revision: 5c3ac057608b
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: substitution_rates
   owner: devteam
   revision: 3d9544198582
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: snippy
   owner: simon-gladman
   revisions:
   - 93d294cd4d59
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # ngs_annotation - NGS: Annotation
@@ -1000,29 +1168,34 @@ tools:
   revision: 7adfd0589f49
   tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: barrnap
   owner: simon-gladman
   revision: 0b8af9f63afc
   tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: prokka
   owner: crs4
   revisions:
   - a17498c603ec
   tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: infernal
   owner: bgruening
   revisions:
   - 6e18e0b098cd
   tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: abricate
   owner: iuc
   revisions:
   - 15197951a756
   tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # metagenomics - Metagenomic analyses
@@ -1032,107 +1205,127 @@ tools:
 #  revision: a73ae72b47aa
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: t2t_report
 #  owner: devteam
 #  revision: 592acb9505fc
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: usearch_dereplication
 #  owner: qfab
 #  revision: 88fc52f1c5db
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: rarefaction
 #  owner: qfab
 #  revision: f6c468a79849
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: find_diag_hits
 #  owner: devteam
 #  revision: acf51ff24c7d
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: pynast
 #  owner: qfab
 #  revision: 17b2737094ce
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: usearch_cluster_otus
 #  owner: qfab
 #  revision: 5d05b34a5fdf
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: collector_curve
 #  owner: qfab
 #  revision: 13552951d226
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: gi2taxonomy
 #  owner: devteam
 #  revision: 7b1b03c4465d
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: t2ps
 #  owner: devteam
 #  revision: dee81096ec71
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: usearch_uchime
 #  owner: qfab
 #  revision: fd0ab76b83f1
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: lca_wrapper
 #  owner: devteam
 #  revision: 33e8ed5a4601
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: usearch_map_reads_to_otus
 #  owner: qfab
 #  revision: 87603fcae838
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 #- name: fasttree_linux_64bit
 #  owner: qfab
 #  revision: bd117e6f363c
 #  tool_panel_section_id: metagenomics
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
+#  install_resolver_dependencies: False
 - name: kraken
   owner: devteam
   revisions:
   - b2392a9dfb01
   tool_panel_section_id: metagenomics
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: kraken_report
   owner: devteam
   revisions:
   - 9ae975c30dde
   tool_panel_section_id: metagenomics
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: kraken_filter
   owner: devteam
   revisions:
   - fe94f318048c
   tool_panel_section_id: metagenomics
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: kraken_translate
   owner: devteam
   revisions:
   - b9971bca4b01
   tool_panel_section_id: metagenomics
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: vsearch
   owner: iuc
   revisions:
   - 576963db5f1b
   tool_panel_section_id: metagenomics
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: suite_biom_format
   owner: iuc
   revisions:
   - 8eda049e45c2
   tool_panel_section_id: convert
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # typing - Typing
@@ -1143,6 +1336,7 @@ tools:
   - 735872ff8222
   tool_panel_section_id: typing
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 ######################################################################
 ## DATA MANAGERS
@@ -1153,38 +1347,46 @@ tools:
   revision: bca4c608408c
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: data_manager_bwa_mem_index_builder
   owner: devteam
   revision: cb0147ade868
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: data_manager_bowtie2_index_builder
   owner: devteam
   revision: 9bf4eb559ed5
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: data_manager_hisat2_index_builder
   owner: iuc
   revision: d210e1f185bd
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: data_manager_gatk_picard_index_builder
   owner: devteam
   revision: 700f2df51eb0
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: data_manager_sam_fasta_index_builder
   owner: devteam
   revision: 2a1ac1abc3f7
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: data_manager_snpeff
   owner: iuc
   revision: 9ac823a8b328
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: data_manager_build_kraken_database
   owner: devteam
   revision: 065d8a4d74f4
   tool_panel_section_id: getext
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
