@@ -323,7 +323,7 @@ tools:
 - name: mummer
   owner: peterjc
   revisions:
-  - 683ea5ab0008
+  - d9f3d4779507
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: False
