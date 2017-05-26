@@ -1047,7 +1047,7 @@ tools:
 - name: salmon
   owner: bgruening
   revisions:
-  - 1b22d8a18acc
+  - 5a60f347f566
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
