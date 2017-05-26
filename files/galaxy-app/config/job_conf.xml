@@ -45,6 +45,9 @@
         <destination id="local_runner" runner="local" />
     </destinations>
     <tools>
+        <!-- Need to specify no multi-threading for GATK Depth of Coverage -->
+        <tool id="toolshed.g2.bx.psu.edu/repos/iuc/gatk2/gatk2_depth_of_coverage/2.8.0" destination="slurm_cluster" />
+
         <!-- <tool id="upload1" destination="local_runner" /> -->
         <!-- <tool id="random_lines1" destination="pulsar_server" /> -->
         <!-- <tool id="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.3.1" destination="mapping_dynamic" />
