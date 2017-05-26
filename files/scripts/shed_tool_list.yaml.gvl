@@ -477,7 +477,7 @@ tools:
   revision: fc288950c3b7
   tool_panel_section_id: ngs_picard
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 
 #---------------------------------------------------------------------
 # samtools - NGS: SAM Tools
@@ -487,7 +487,7 @@ tools:
   revision: bb40e4252392
   tool_panel_section_id: samtools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: bam_to_sam
   owner: devteam
   revision: af7c50162f0b
@@ -617,7 +617,7 @@ tools:
   revision: fadebae7e69b
   tool_panel_section_id: bed_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 
 #---------------------------------------------------------------------
 # ngs_vcf_tools - NGS: VCF Manipulation
@@ -877,13 +877,13 @@ tools:
   revision: db2dc6bc8f05
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: trimmomatic
   owner: pjbriggs
   revision: 6eeacf19a38e
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: trim_galore
   owner: bgruening
   revision: 80cd83b11214
@@ -900,14 +900,14 @@ tools:
   - 53646aaaafef
   tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: bowtie2
   owner: devteam
   revisions:
   - 937aa69e715f
   tool_panel_section_id: ngs_mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: lastz
   owner: devteam
   revision: 60afcc2c1d05
@@ -929,7 +929,7 @@ tools:
   revision: d81360ea69d8
   tool_panel_section_id: ngs_assembly
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: pilon
   owner: iuc
   revisions:
@@ -953,13 +953,13 @@ tools:
   revision: 2ec097c8e843
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: tophat2
   owner: devteam
   revision: 16c4255042be
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: tophat_fusion_post
   owner: devteam
   revision: f83394a2c2da
@@ -971,13 +971,13 @@ tools:
   revision: e04dbae2abe0
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: cuffdiff
   owner: devteam
   revision: d3ae7d9c2202
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: cuffquant
   owner: devteam
   revision: 6dc45faebc1d
@@ -1037,20 +1037,20 @@ tools:
   revision: 620d5603d1a8
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: deseq2
   owner: iuc
   revision: 6f91b8ce6e07
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: salmon
   owner: bgruening
   revisions:
   - 1b22d8a18acc
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: suite_trinity
   owner: iuc
   revision: 0de8c585b1cb
@@ -1062,7 +1062,7 @@ tools:
   revision: c84d44519b2e
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 
 #---------------------------------------------------------------------
 # peak_calling - NGS: Peak Calling
@@ -1109,13 +1109,13 @@ tools:
   revision: bc1e0cd41241
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: freebayes
   owner: devteam
   revision: bf27106652f3
   tool_panel_section_id: ngs_variant_analysis
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: vcf_filter
   owner: devteam
   revision: da1a6f33b504
@@ -1168,20 +1168,20 @@ tools:
   revision: 7adfd0589f49
   tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: barrnap
   owner: simon-gladman
   revision: 0b8af9f63afc
   tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: prokka
   owner: crs4
   revisions:
   - a17498c603ec
   tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: infernal
   owner: bgruening
   revisions:
