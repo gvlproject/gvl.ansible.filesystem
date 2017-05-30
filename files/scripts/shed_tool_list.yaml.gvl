@@ -271,7 +271,7 @@ tools:
   revision: 69c5e9c0add0
   tool_panel_section_id: plots
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: False
+  install_resolver_dependencies: True
 - name: gmaj
   owner: devteam
   revision: 2cd5ee197ec7
@@ -758,6 +758,16 @@ tools:
   install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
+# ngs_deeptools - NGS: DeepTools
+
+- name: suite_deeptools
+  owner: bgruening
+  revisions: 3d68b716965a
+  tool_panel_section_id: ngs_deeptools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
+
+#---------------------------------------------------------------------
 # emboss - EMBOSS
 
 - name: emboss_5
@@ -776,21 +786,6 @@ tools:
   tool_panel_section_id: blast+
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: False
-
-#---------------------------------------------------------------------
-# snpeff - snpEff
-
-#---------------------------------------------------------------------
-# multiple_regression - Multiple regression
-
-#---------------------------------------------------------------------
-# multivariate_analysis - Multivariate Analysis
-
-#---------------------------------------------------------------------
-# regional_variation - Regional Variation
-
-#---------------------------------------------------------------------
-# hgv - HGV
 
 
 ######################################################################
@@ -954,6 +949,12 @@ tools:
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+- name: rgrnastar
+  owner: iuc
+  revision: 318b2a9d54dd
+  tool_panel_section_id: ngs_rna_tools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 - name: tophat2
   owner: devteam
   revision: 16c4255042be
@@ -1181,7 +1182,7 @@ tools:
   - a17498c603ec
   tool_panel_section_id: ngs_annotation
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
+  install_resolver_dependencies: False
 - name: infernal
   owner: bgruening
   revisions:

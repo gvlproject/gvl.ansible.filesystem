@@ -56,19 +56,11 @@
     </section>
     <section id="gatk2" name="NGS: GATK Tools 2.8" version="">
     </section>
+    <section id="ngs_deeptools" name="NGS: DeepTools" version="">
+    </section>
     <section id="emboss" name="EMBOSS" version="">
     </section>
     <section id="blast+" name="Blast +" version="">
-    </section>
-    <section id="snpeff" name="snpEff" version="">
-    </section>
-    <section id="multiple_regression" name="Multiple regression" version="">
-    </section>
-    <section id="multivariate_analysis" name="Multivariate Analysis" version="">
-    </section>
-    <section id="regional_variation" name="Regional Variation" version="">
-    </section>
-    <section id="hgv" name="HGV" version="">
     </section>
     <section id="alignment" name="NGS: Alignment" version="">
     </section>
