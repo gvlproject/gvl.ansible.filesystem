@@ -14,6 +14,12 @@
   shell: rm -f {{ galaxy_server_dir }}/*.log*
   ignore_errors: true
 
+- name: Clean up Conda tarballs to reduce archive size
+  shell: "{{ tool_dependency_dir }}/_conda/bin/conda clean --tarballs --yes"
+  become: yes
+  become_user: "{{ galaxy_user_name }}"
+  ignore_errors: yes
+
 - name: Clear out Galaxy's tmp folder
   shell: rm -rf {{ galaxyFS_base_dir }}/tmp/*
   ignore_errors: true
