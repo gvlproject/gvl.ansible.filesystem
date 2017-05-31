@@ -15,7 +15,7 @@
   ignore_errors: true
 
 - name: Clean up Conda tarballs to reduce archive size
-  shell: "{{ tool_dependency_dir }}/_conda/bin/conda clean --tarballs --yes"
+  shell: "{{ galaxyFS_base_dir }}/tools/_conda/bin/conda clean --tarballs --yes"
   become: yes
   become_user: "{{ galaxy_user_name }}"
   ignore_errors: yes
