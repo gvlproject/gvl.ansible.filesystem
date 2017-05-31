@@ -762,7 +762,7 @@ tools:
 
 - name: suite_deeptools
   owner: bgruening
-  revisions: 3d68b716965a
+  revision: 3d68b716965a
   tool_panel_section_id: ngs_deeptools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: False
