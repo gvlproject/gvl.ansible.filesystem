@@ -100,7 +100,7 @@ genomes:
     "dbkey_source|dbkey_name": Human (hg19)
     "reference_source|reference_source_selector": ucsc
     "reference_source|requested_dbkey": hg19
-      << : *custom_sort_order # merge in custom sort order defined above
+    << : *custom_sort_order # merge in custom sort order defined above
     all_fasta_source: hg19
     tophat2: True
     genome_version: hg19
@@ -114,7 +114,7 @@ genomes:
     "dbkey_source|dbkey_name": Human (hg38)
     "reference_source|reference_source_selector": ucsc
     "reference_source|requested_dbkey": hg38
-      << : *custom_sort_order # merge in custom sort order defined above
+    << : *custom_sort_order # merge in custom sort order defined above
     all_fasta_source: hg38
     tophat2: True
     genome_version: hg38
