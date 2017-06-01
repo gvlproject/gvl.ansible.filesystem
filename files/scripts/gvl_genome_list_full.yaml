@@ -1,5 +1,6 @@
 api_key: <Galaxy Admin user API key>
 galaxy_instance: <IP address for target Galaxy instance>
+
 # Shared sorted order for human genomes
 sort_order: &custom_sort_order
   "sorting|sort_selector": custom
@@ -29,161 +30,173 @@ sort_order: &custom_sort_order
   "sorting|sequence_identifiers_23|identifier": chrY
   "sorting|sequence_identifiers_24|identifier": chrM
   "sorting|handle_not_listed|handle_not_listed_selector": keep_append
-# Shared list of data managers to run
-data_managers_list: &all_data_managers
-- id: data_manager_fetch_genome_all_fasta_dbkey
-- id: gatk_picard_index_builder
-- id: bwa_mem_index_builder_data_manager
-- id: bowtie2_index_builder_data_manager
-- id: sam_fasta_index_builder
-- id: data_manager_snpeff_download
+
+# Shared list of data managers to run.
+# HISAT2 indices are only generated for hg19, sacCer2, dm3, mm10. This is
+# for archive size reasons. HISAT2 indices are large and don't compress well.
+data_managers_list: &common_data_managers
+  - id: data_manager_fetch_genome_all_fasta_dbkey
+  - id: gatk_picard_index_builder
+  - id: bwa_mem_index_builder_data_manager
+  - id: bowtie2_index_builder_data_manager
+  - id: sam_fasta_index_builder
+  - id: data_manager_snpeff_download
+
 # Each dbkey should posses keys and values for all DMs that require
 # arguments other than the dbkey itself
 genomes:
-- dbkey: bosTau7
-  "dbkey_source|dbkey_source_selector": new
-  "dbkey_source|dbkey": bosTau7
-  "dbkey_source|dbkey_name": Cow (bosTau7)
-  "reference_source|reference_source_selector": ucsc
-  "reference_source|requested_dbkey": bosTau7
-  all_fasta_source: bosTau7
-  tophat2: True
-  genome_version: UMD3.1.76
-  data_managers: *all_data_managers # ref data_managers_list defined previously
-- dbkey: ce10
-  "dbkey_source|dbkey_source_selector": new
-  "dbkey_source|dbkey": ce10
-  "dbkey_source|dbkey_name": C. elegans (ce10)
-  "reference_source|reference_source_selector": ucsc
-  "reference_source|requested_dbkey": ce10
-  all_fasta_source: ce10
-  tophat2: True
-  genome_version: WS241
-  data_managers: *all_data_managers # ref data_managers_list defined previously
-- dbkey: danRer7
-  "dbkey_source|dbkey_source_selector": new
-  "dbkey_source|dbkey": danRer7
-  "dbkey_source|dbkey_name": Zebrafish (danRer7)
-  "reference_source|reference_source_selector": ucsc
-  "reference_source|requested_dbkey": danRer7
-  all_fasta_source: danRer7
-  tophat2: True
-  genome_version: Zv9.76
-  index_algorithm: bwtsw
-  data_managers: *all_data_managers # ref data_managers_list defined previously
-- dbkey: dm3
-  "dbkey_source|dbkey_source_selector": existing
-  "dbkey_source|dbkey": dm3
-  all_fasta_source: dm3
-  tophat2: True
-  genome_version: BDGP5.76
-  data_managers: *all_data_managers # ref data_managers_list defined previously
-- dbkey: hg19
-  "dbkey_source|dbkey_source_selector": new
-  "dbkey_source|dbkey": hg19
-  "dbkey_source|dbkey_name": Human (hg19)
-  "reference_source|reference_source_selector": ucsc
-  "reference_source|requested_dbkey": hg19
-  << : *custom_sort_order # merge in custom sort order defined above
-  all_fasta_source: hg19
-  tophat2: True
-  genome_version: hg19
-  data_managers: *all_data_managers # ref data_managers_list defined previously
-- dbkey: hg38
-  "dbkey_source|dbkey_source_selector": new
-  "dbkey_source|dbkey": hg38
-  "dbkey_source|dbkey_name": Human (hg38)
-  "reference_source|reference_source_selector": ucsc
-  "reference_source|requested_dbkey": hg38
-  << : *custom_sort_order # merge in custom sort order defined above
-  all_fasta_source: hg38
-  tophat2: True
-  genome_version: hg38
-  data_managers: *all_data_managers # ref data_managers_list defined previously
-- dbkey: mm10
-  "dbkey_source|dbkey_source_selector": new
-  "dbkey_source|dbkey": mm10
-  "dbkey_source|dbkey_name": Mouse (mm10)
-  "reference_source|reference_source_selector": ucsc
-  "reference_source|requested_dbkey": mm10
-  all_fasta_source: mm10
-  tophat2: True
-  genome_version: GRCm38.76
-  data_managers: *all_data_managers # ref data_managers_list defined previously
-- dbkey: mm9
-  "dbkey_source|dbkey_source_selector": new
-  "dbkey_source|dbkey": mm9
-  "dbkey_source|dbkey_name": Mouse (mm9)
-  "reference_source|reference_source_selector": ucsc
-  "reference_source|requested_dbkey": mm9
-  all_fasta_source: mm9
-  tophat2: True
-  data_managers:
-    - id: data_manager_fetch_genome_all_fasta_dbkey
-    - id: gatk_picard_index_builder
-    - id: bwa_mem_index_builder_data_manager
-    - id: bowtie2_index_builder_data_manager
-    - id: sam_fasta_index_builder
-- dbkey: oviAri3
-  "dbkey_source|dbkey_source_selector": new
-  "dbkey_source|dbkey": oviAri3
-  "dbkey_source|dbkey_name": Sheep (oviAri3)
-  "reference_source|reference_source_selector": ucsc
-  "reference_source|requested_dbkey": oviAri3
-  all_fasta_source: oviAri3
-  tophat2: True
-  genome_version: Oar_v3.1.76
-  data_managers: *all_data_managers # ref data_managers_list defined previously
-- dbkey: rn5
-  "dbkey_source|dbkey_source_selector": new
-  "dbkey_source|dbkey": rn5
-  "dbkey_source|dbkey_name": Rat (rn5)
-  "reference_source|reference_source_selector": ucsc
-  "reference_source|requested_dbkey": rn5
-  all_fasta_source: rn5
-  tophat2: True
-  genome_version: Rnor_5.0.76
-  data_managers: *all_data_managers # ref data_managers_list defined previously
-- dbkey: rn6
-  "dbkey_source|dbkey_source_selector": new
-  "dbkey_source|dbkey": rn6
-  "dbkey_source|dbkey_name": Rat (rn6)
-  "reference_source|reference_source_selector": ucsc
-  "reference_source|requested_dbkey": rn6
-  all_fasta_source: rn6
-  tophat2: True
-  data_managers:
-    - id: data_manager_fetch_genome_all_fasta_dbkey
-    - id: gatk_picard_index_builder
-    - id: bwa_mem_index_builder_data_manager
-    - id: bowtie2_index_builder_data_manager
-    - id: sam_fasta_index_builder
-- dbkey: sacCer2
-  "dbkey_source|dbkey_source_selector": existing
-  "dbkey_source|dbkey": sacCer2
-  all_fasta_source: sacCer2
-  tophat2: True
-  genome_version: EF4.74
-  data_managers: *all_data_managers # ref data_managers_list defined previously
-- dbkey: sacCer3
-  "dbkey_source|dbkey_source_selector": new
-  "dbkey_source|dbkey": sacCer3
-  "dbkey_source|dbkey_name": S. cerevisiae (sacCer3)
-  "reference_source|reference_source_selector": ucsc
-  "reference_source|requested_dbkey": sacCer3
-  all_fasta_source: sacCer3
-  tophat2: True
-  genome_version: R64-1-1.76
-  data_managers: *all_data_managers # ref data_managers_list defined previously
-- dbkey: xenTro2
-  "dbkey_source|dbkey_source_selector": existing
-  "dbkey_source|dbkey": xenTro2
-  all_fasta_source: xenTro2
-  tophat2: True
-  index_algorithm: bwtsw
-  data_managers:
-    - id: data_manager_fetch_genome_all_fasta_dbkey
-    - id: gatk_picard_index_builder
-    - id: bwa_mem_index_builder_data_manager
-    - id: bowtie2_index_builder_data_manager
-    - id: sam_fasta_index_builder
+  - dbkey: bosTau7
+    "dbkey_source|dbkey_source_selector": new
+    "dbkey_source|dbkey": bosTau7
+    "dbkey_source|dbkey_name": Cow (bosTau7)
+    "reference_source|reference_source_selector": ucsc
+    "reference_source|requested_dbkey": bosTau7
+    all_fasta_source: bosTau7
+    tophat2: True
+    genome_version: UMD3.1.76
+    data_managers: *common_data_managers # ref data_managers_list defined previously
+  - dbkey: ce10
+    "dbkey_source|dbkey_source_selector": new
+    "dbkey_source|dbkey": ce10
+    "dbkey_source|dbkey_name": C. elegans (ce10)
+    "reference_source|reference_source_selector": ucsc
+    "reference_source|requested_dbkey": ce10
+    all_fasta_source: ce10
+    tophat2: True
+    genome_version: WS241
+    data_managers: *common_data_managers # ref data_managers_list defined previously
+  - dbkey: danRer7
+    "dbkey_source|dbkey_source_selector": new
+    "dbkey_source|dbkey": danRer7
+    "dbkey_source|dbkey_name": Zebrafish (danRer7)
+    "reference_source|reference_source_selector": ucsc
+    "reference_source|requested_dbkey": danRer7
+    all_fasta_source: danRer7
+    tophat2: True
+    genome_version: Zv9.76
+    index_algorithm: bwtsw
+    data_managers: *common_data_managers # ref data_managers_list defined previously
+  - dbkey: dm3
+    "dbkey_source|dbkey_source_selector": existing
+    "dbkey_source|dbkey": dm3
+    all_fasta_source: dm3
+    tophat2: True
+    genome_version: BDGP5.76
+    data_managers:
+      - <<: *common_data_managers # ref data_managers_list defined previously
+      - id: hisat2_index_builder_data_manager
+  - dbkey: hg19
+    "dbkey_source|dbkey_source_selector": new
+    "dbkey_source|dbkey": hg19
+    "dbkey_source|dbkey_name": Human (hg19)
+    "reference_source|reference_source_selector": ucsc
+    "reference_source|requested_dbkey": hg19
+    << : *custom_sort_order # merge in custom sort order defined above
+    all_fasta_source: hg19
+    tophat2: True
+    genome_version: hg19
+    data_managers:
+      - <<: *common_data_managers # ref data_managers_list defined previously
+      - id: hisat2_index_builder_data_manager
+  - dbkey: hg38
+    "dbkey_source|dbkey_source_selector": new
+    "dbkey_source|dbkey": hg38
+    "dbkey_source|dbkey_name": Human (hg38)
+    "reference_source|reference_source_selector": ucsc
+    "reference_source|requested_dbkey": hg38
+    << : *custom_sort_order # merge in custom sort order defined above
+    all_fasta_source: hg38
+    tophat2: True
+    genome_version: hg38
+    data_managers: *common_data_managers # ref data_managers_list defined previously
+  - dbkey: mm10
+    "dbkey_source|dbkey_source_selector": new
+    "dbkey_source|dbkey": mm10
+    "dbkey_source|dbkey_name": Mouse (mm10)
+    "reference_source|reference_source_selector": ucsc
+    "reference_source|requested_dbkey": mm10
+    all_fasta_source: mm10
+    tophat2: True
+    genome_version: GRCm38.76
+    data_managers:
+      - <<: *common_data_managers # ref data_managers_list defined previously
+      - id: hisat2_index_builder_data_manager
+  - dbkey: mm9
+    "dbkey_source|dbkey_source_selector": new
+    "dbkey_source|dbkey": mm9
+    "dbkey_source|dbkey_name": Mouse (mm9)
+    "reference_source|reference_source_selector": ucsc
+    "reference_source|requested_dbkey": mm9
+    all_fasta_source: mm9
+    tophat2: True
+    data_managers:
+      - id: data_manager_fetch_genome_all_fasta_dbkey
+      - id: gatk_picard_index_builder
+      - id: bwa_mem_index_builder_data_manager
+      - id: bowtie2_index_builder_data_manager
+      - id: sam_fasta_index_builder
+  - dbkey: oviAri3
+    "dbkey_source|dbkey_source_selector": new
+    "dbkey_source|dbkey": oviAri3
+    "dbkey_source|dbkey_name": Sheep (oviAri3)
+    "reference_source|reference_source_selector": ucsc
+    "reference_source|requested_dbkey": oviAri3
+    all_fasta_source: oviAri3
+    tophat2: True
+    genome_version: Oar_v3.1.76
+    data_managers: *common_data_managers # ref data_managers_list defined previously
+  - dbkey: rn5
+    "dbkey_source|dbkey_source_selector": new
+    "dbkey_source|dbkey": rn5
+    "dbkey_source|dbkey_name": Rat (rn5)
+    "reference_source|reference_source_selector": ucsc
+    "reference_source|requested_dbkey": rn5
+    all_fasta_source: rn5
+    tophat2: True
+    genome_version: Rnor_5.0.76
+    data_managers: *common_data_managers # ref data_managers_list defined previously
+  - dbkey: rn6
+    "dbkey_source|dbkey_source_selector": new
+    "dbkey_source|dbkey": rn6
+    "dbkey_source|dbkey_name": Rat (rn6)
+    "reference_source|reference_source_selector": ucsc
+    "reference_source|requested_dbkey": rn6
+    all_fasta_source: rn6
+    tophat2: True
+    data_managers:
+      - id: data_manager_fetch_genome_all_fasta_dbkey
+      - id: gatk_picard_index_builder
+      - id: bwa_mem_index_builder_data_manager
+      - id: bowtie2_index_builder_data_manager
+      - id: sam_fasta_index_builder
+  - dbkey: sacCer2
+    "dbkey_source|dbkey_source_selector": existing
+    "dbkey_source|dbkey": sacCer2
+    all_fasta_source: sacCer2
+    tophat2: True
+    genome_version: EF4.74
+    data_managers:
+      - <<: *common_data_managers # ref data_managers_list defined previously
+      - id: hisat2_index_builder_data_manager
+  - dbkey: sacCer3
+    "dbkey_source|dbkey_source_selector": new
+    "dbkey_source|dbkey": sacCer3
+    "dbkey_source|dbkey_name": S. cerevisiae (sacCer3)
+    "reference_source|reference_source_selector": ucsc
+    "reference_source|requested_dbkey": sacCer3
+    all_fasta_source: sacCer3
+    tophat2: True
+    genome_version: R64-1-1.76
+    data_managers: *common_data_managers # ref data_managers_list defined previously
+  - dbkey: xenTro2
+    "dbkey_source|dbkey_source_selector": existing
+    "dbkey_source|dbkey": xenTro2
+    all_fasta_source: xenTro2
+    tophat2: True
+    index_algorithm: bwtsw
+    data_managers:
+      - id: data_manager_fetch_genome_all_fasta_dbkey
+      - id: gatk_picard_index_builder
+      - id: bwa_mem_index_builder_data_manager
+      - id: bowtie2_index_builder_data_manager
+      - id: sam_fasta_index_builder
