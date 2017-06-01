@@ -32,15 +32,17 @@ sort_order: &custom_sort_order
   "sorting|handle_not_listed|handle_not_listed_selector": keep_append
 
 # Shared list of data managers to run.
-# HISAT2 indices are only generated for hg19, sacCer2, dm3, mm10. This is
-# for archive size reasons. HISAT2 indices are large and don't compress well.
+# Note:
+# - HISAT2 indices are only generated for hg19, sacCer2, dm3, mm10. This is
+#   for archive size reasons. HISAT2 indices are large and don't compress well.
+# - SnpEff databases are only availble for selected genomes. If available, the
+#   data manager is included in the genome's data_manager list.
 data_managers_list: &common_data_managers
   - id: data_manager_fetch_genome_all_fasta_dbkey
   - id: gatk_picard_index_builder
   - id: bwa_mem_index_builder_data_manager
   - id: bowtie2_index_builder_data_manager
   - id: sam_fasta_index_builder
-  - id: data_manager_snpeff_download
 
 # Each dbkey should posses keys and values for all DMs that require
 # arguments other than the dbkey itself
@@ -54,7 +56,9 @@ genomes:
     all_fasta_source: bosTau7
     tophat2: True
     genome_version: UMD3.1.76
-    data_managers: *common_data_managers # ref data_managers_list defined previously
+    data_managers:
+      - <<: *common_data_managers # ref data_managers_list defined previously
+      - id: data_manager_snpeff_download
   - dbkey: ce10
     "dbkey_source|dbkey_source_selector": new
     "dbkey_source|dbkey": ce10
@@ -64,7 +68,9 @@ genomes:
     all_fasta_source: ce10
     tophat2: True
     genome_version: WS241
-    data_managers: *common_data_managers # ref data_managers_list defined previously
+    data_managers:
+      - <<: *common_data_managers # ref data_managers_list defined previously
+      - id: data_manager_snpeff_download
   - dbkey: danRer7
     "dbkey_source|dbkey_source_selector": new
     "dbkey_source|dbkey": danRer7
@@ -75,7 +81,9 @@ genomes:
     tophat2: True
     genome_version: Zv9.76
     index_algorithm: bwtsw
-    data_managers: *common_data_managers # ref data_managers_list defined previously
+    data_managers:
+      - <<: *common_data_managers # ref data_managers_list defined previously
+      - id: data_manager_snpeff_download
   - dbkey: dm3
     "dbkey_source|dbkey_source_selector": existing
     "dbkey_source|dbkey": dm3
@@ -85,30 +93,34 @@ genomes:
     data_managers:
       - <<: *common_data_managers # ref data_managers_list defined previously
       - id: hisat2_index_builder_data_manager
+      - id: data_manager_snpeff_download
   - dbkey: hg19
     "dbkey_source|dbkey_source_selector": new
     "dbkey_source|dbkey": hg19
     "dbkey_source|dbkey_name": Human (hg19)
     "reference_source|reference_source_selector": ucsc
     "reference_source|requested_dbkey": hg19
-    << : *custom_sort_order # merge in custom sort order defined above
+      << : *custom_sort_order # merge in custom sort order defined above
     all_fasta_source: hg19
     tophat2: True
     genome_version: hg19
     data_managers:
       - <<: *common_data_managers # ref data_managers_list defined previously
       - id: hisat2_index_builder_data_manager
+      - id: data_manager_snpeff_download
   - dbkey: hg38
     "dbkey_source|dbkey_source_selector": new
     "dbkey_source|dbkey": hg38
     "dbkey_source|dbkey_name": Human (hg38)
     "reference_source|reference_source_selector": ucsc
     "reference_source|requested_dbkey": hg38
-    << : *custom_sort_order # merge in custom sort order defined above
+      << : *custom_sort_order # merge in custom sort order defined above
     all_fasta_source: hg38
     tophat2: True
     genome_version: hg38
-    data_managers: *common_data_managers # ref data_managers_list defined previously
+    data_managers:
+      - <<: *common_data_managers # ref data_managers_list defined previously
+      - id: data_manager_snpeff_download
   - dbkey: mm10
     "dbkey_source|dbkey_source_selector": new
     "dbkey_source|dbkey": mm10
@@ -121,6 +133,7 @@ genomes:
     data_managers:
       - <<: *common_data_managers # ref data_managers_list defined previously
       - id: hisat2_index_builder_data_manager
+      - id: data_manager_snpeff_download
   - dbkey: mm9
     "dbkey_source|dbkey_source_selector": new
     "dbkey_source|dbkey": mm9
@@ -130,11 +143,7 @@ genomes:
     all_fasta_source: mm9
     tophat2: True
     data_managers:
-      - id: data_manager_fetch_genome_all_fasta_dbkey
-      - id: gatk_picard_index_builder
-      - id: bwa_mem_index_builder_data_manager
-      - id: bowtie2_index_builder_data_manager
-      - id: sam_fasta_index_builder
+      - <<: *common_data_managers # ref data_managers_list defined previously
   - dbkey: oviAri3
     "dbkey_source|dbkey_source_selector": new
     "dbkey_source|dbkey": oviAri3
@@ -144,7 +153,9 @@ genomes:
     all_fasta_source: oviAri3
     tophat2: True
     genome_version: Oar_v3.1.76
-    data_managers: *common_data_managers # ref data_managers_list defined previously
+    data_managers:
+      - <<: *common_data_managers # ref data_managers_list defined previously
+      - id: data_manager_snpeff_download
   - dbkey: rn5
     "dbkey_source|dbkey_source_selector": new
     "dbkey_source|dbkey": rn5
@@ -154,7 +165,9 @@ genomes:
     all_fasta_source: rn5
     tophat2: True
     genome_version: Rnor_5.0.76
-    data_managers: *common_data_managers # ref data_managers_list defined previously
+    data_managers:
+      - <<: *common_data_managers # ref data_managers_list defined previously
+      - id: data_manager_snpeff_download
   - dbkey: rn6
     "dbkey_source|dbkey_source_selector": new
     "dbkey_source|dbkey": rn6
@@ -164,11 +177,7 @@ genomes:
     all_fasta_source: rn6
     tophat2: True
     data_managers:
-      - id: data_manager_fetch_genome_all_fasta_dbkey
-      - id: gatk_picard_index_builder
-      - id: bwa_mem_index_builder_data_manager
-      - id: bowtie2_index_builder_data_manager
-      - id: sam_fasta_index_builder
+      - <<: *common_data_managers # ref data_managers_list defined previously
   - dbkey: sacCer2
     "dbkey_source|dbkey_source_selector": existing
     "dbkey_source|dbkey": sacCer2
@@ -178,6 +187,7 @@ genomes:
     data_managers:
       - <<: *common_data_managers # ref data_managers_list defined previously
       - id: hisat2_index_builder_data_manager
+      - id: data_manager_snpeff_download
   - dbkey: sacCer3
     "dbkey_source|dbkey_source_selector": new
     "dbkey_source|dbkey": sacCer3
@@ -187,7 +197,9 @@ genomes:
     all_fasta_source: sacCer3
     tophat2: True
     genome_version: R64-1-1.76
-    data_managers: *common_data_managers # ref data_managers_list defined previously
+    data_managers:
+      - <<: *common_data_managers # ref data_managers_list defined previously
+      - id: data_manager_snpeff_download
   - dbkey: xenTro2
     "dbkey_source|dbkey_source_selector": existing
     "dbkey_source|dbkey": xenTro2
@@ -195,8 +207,4 @@ genomes:
     tophat2: True
     index_algorithm: bwtsw
     data_managers:
-      - id: data_manager_fetch_genome_all_fasta_dbkey
-      - id: gatk_picard_index_builder
-      - id: bwa_mem_index_builder_data_manager
-      - id: bowtie2_index_builder_data_manager
-      - id: sam_fasta_index_builder
+      - <<: *common_data_managers # ref data_managers_list defined previously
