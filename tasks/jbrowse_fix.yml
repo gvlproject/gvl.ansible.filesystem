@@ -1,0 +1,7 @@
+- name: fix jbrowse python file to remove double quotes from find command
+  replace:
+    path: /mnt/galaxy/shed_tools/toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/69c5e9c0add0/jbrowse/jbrowse.py
+    regexp: "cmd = ['find', destination, '-type', 'l', '-xtype', 'l', '-exec', 'rm', \"'{}'\", '+']"
+    replace: "cmd = ['find', destination, '-type', 'l', '-xtype', 'l', '-exec', 'rm', '{}', '+']"
+    backup: yes
+  ignore_errors: yes
