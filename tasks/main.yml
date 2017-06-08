@@ -3,6 +3,8 @@
 
 - include: set_version.yml
 
+- include: install_igv.yml
+
 - include: jbrowse_fix.yml # remove this as soon as jbrowse is patched.
 
 - include: create_archive.yml

@@ -1,0 +1,18 @@
+# Install IGV in the Galaxy tools directory despite not being a Galaxy tool.
+# Is there a more suitable location to store IGV?
+- name: Create tool folder for IGV
+  file:
+    path: '{{ galaxyFS_base_dir }}/tools/igv'
+    state: 'directory'
+    mode: '0755'
+    owner: "{{ galaxy_user_name }}"
+
+- name: Download IGV
+  get_url: timeout=60 url="https://swift.rc.nectar.org.au:8888/v1/AUTH_377/public/IGV_2.3.93.zip" dest={{{ galaxyFS_base_dir }}/tools/igv/IGV_2.3.93.zip
+  become: yes
+  become_user: "{{ galaxy_user_name }}"
+
+- name: Unarchive IGV
+  unarchive: src={{ galaxyFS_base_dir }}/tools/igv/IGV_2.3.93.zip dest={{ galaxyFS_base_dir }}/tools/igv/ remote_src=yes
+  become: yes
+  become_user: "{{ galaxy_user_name }}"
