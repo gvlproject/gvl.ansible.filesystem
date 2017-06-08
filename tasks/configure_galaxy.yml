@@ -63,3 +63,7 @@
   become: yes
   become_user: "{{ galaxy_user_name }}"
 
+- name: Fix toolshed image path (https://overv.io/gvlproject/gvl.ansible.playbook/issues/48/)
+  replace: dest="{{ galaxy_server_dir }}/lib/tool_shed/util/shed_util_common.py" regexp="route_to_images = 'admin_toolshed" replace="route_to_images = 'galaxy/admin_toolshed"
+  become: yes
+  become_user: "{{ galaxy_user_name }}"
