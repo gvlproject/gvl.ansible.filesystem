@@ -12,7 +12,6 @@
 - name: GVL Galaxy - Rebuild Galaxy client
   shell: executable=/bin/bash make client chdir="{{ galaxy_server_dir }}"
 
-
 - name: Create tool folder for GATK2
   file:
     path: '{{ galaxyFS_base_dir }}/tools/gatk2'
@@ -30,6 +29,7 @@
   become: yes
   become_user: "{{ galaxy_user_name }}"
 
+# # This isn't needed anymore since conda handles both tools now
 # Patch up all bowtie2 executable paths so that there's a bowtie2-align executable in each (tophat2 looks for the bowtie2-align executable when running with modules on the commandline)
 #- name: Patchup bowtie2 executable paths so they work with tophat2 and modules
 #  shell: executable=/bin/bash cd {{ item }}/*/package*/*/; ln -s bowtie2 bowtie2-align
@@ -67,3 +67,29 @@
   replace: dest="{{ galaxy_server_dir }}/lib/tool_shed/util/shed_util_common.py" regexp="route_to_images = 'admin_toolshed" replace="route_to_images = 'galaxy/admin_toolshed"
   become: yes
   become_user: "{{ galaxy_user_name }}"
+
+- name: Insert data table entries for gatk2 and picard indices (https://github.com/gvlproject/gvl.ansible.playbook/issues/72)
+  blockinfile:
+    path: "{{ galaxyFS_base_dir }}/var/shed_tool_data_table_conf.xml"
+    insertbefore: "</tables>"
+    block: |
+      <table comment_char="#" name="gatk2_picard_indexes">
+              <columns>value, dbkey, name, path</columns>
+              <file path="/mnt/galaxyIndices/tool-data/dm/toolshed.g2.bx.psu.edu/repos/devteam/data_manager_gatk_picard_index_builder/b31f1fcb203c/gatk_sorted_picard_index.loc" />
+              <tool_shed_repository>
+                  <tool_shed>toolshed.g2.bx.psu.edu</tool_shed>
+                  <repository_name>gatk2</repository_name>
+                  <repository_owner>iuc</repository_owner>
+                  <installed_changeset_revision>84584664264c</installed_changeset_revision>
+                  </tool_shed_repository>
+          </table>
+      <table comment_char="#" name="picard_indexes">
+              <columns>value, dbkey, name, path</columns>
+              <file path="/mnt/galaxyIndices/tool-data/dm/toolshed.g2.bx.psu.edu/repos/devteam/data_manager_gatk_picard_index_builder/b31f1fcb203c/gatk_sorted_picard_index.loc" />
+              <tool_shed_repository>
+                  <tool_shed>toolshed.g2.bx.psu.edu</tool_shed>
+                  <repository_name>picard</repository_name>
+                  <repository_owner>devteam</repository_owner>
+                  <installed_changeset_revision>fc288950c3b7</installed_changeset_revision>
+                  </tool_shed_repository>
+          </table>
