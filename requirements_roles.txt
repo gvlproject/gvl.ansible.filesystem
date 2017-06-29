@@ -1,6 +1,6 @@
   gvl.ansible.filesystem.presetup
-  galaxyprojectdotorg.cloudman-database
-  galaxyprojectdotorg.galaxy
-  galaxyprojectdotorg.trackster
-  galaxyprojectdotorg.cloudman-galaxy-setup
-  galaxyprojectdotorg.galaxy-tools
+  galaxyproject.cloudman-database
+  galaxyproject.galaxy
+  galaxyproject.trackster
+  galaxyproject.cloudman-galaxy-setup
+  galaxyproject.galaxy-tools
