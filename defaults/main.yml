@@ -120,8 +120,8 @@ gvl_galaxy_mutable_configs:
     dest: "{{ gvl_galaxy_config['app:main']['tool_sheds_config_file'] }}"
 
 # gvl setup details
-gvl_galaxy_git_repo: https://github.com/gvlproject/galaxy
-gvl_galaxy_changeset_id: "gvl_{{ gvl_version }}"
+gvl_galaxy_git_repo: https://github.com/galaxyproject/galaxy
+gvl_galaxy_changeset_id: "release_17.09"
 
 # gvl archive upload details
 gvl_create_archive: False
