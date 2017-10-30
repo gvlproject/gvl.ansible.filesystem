@@ -942,7 +942,7 @@ tools:
   tool_panel_section_id: ngs_assembly
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: False
-- name: Unicycler
+- name: unicycler
   owner: iuc
   tool_panel_section_id: ngs_assembly
   tool_shed_url: https://toolshed.g2.bx.psu.edu
