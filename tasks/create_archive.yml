@@ -52,10 +52,14 @@
   sudo_user: root
   environment:
      OS_AUTH_URL: "{{ OS_AUTH_URL }}"
-     OS_TENANT_ID: "{{ OS_TENANT_ID }}"
-     OS_TENANT_NAME: "{{ OS_TENANT_NAME }}"
+     OS_AUTH_TYPE: "{{ OS_AUTH_TYPE }}"
+     OS_IDENTITY_API_VERSION: "{{ OS_IDENTITY_API_VERSION }}"
+     OS_PROJECT_ID: "{{ OS_PROJECT_ID }}"
+     OS_PROJECT_NAME: "{{ OS_PROJECT_NAME }}"
      OS_USERNAME: "{{ OS_USERNAME }}"
      OS_PASSWORD: "{{ OS_PASSWORD }}"
+     OS_USER_DOMAIN_NAME: "{{ OS_USER_DOMAIN_NAME }}"
+     OS_PROJECT_DOMAIN_NAME: "{{ OS_PROJECT_DOMAIN_NAME }}"
   when: gvl_swift_upload
 
 - name: GVL Galaxy - Install s3cmd library
