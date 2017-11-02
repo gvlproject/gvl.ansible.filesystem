@@ -936,7 +936,7 @@ tools:
   owner: iuc
   tool_panel_section_id: ngs_assembly
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
+  install_resolver_dependencies: False
 - name: spades
   owner: nml
   tool_panel_section_id: ngs_assembly
@@ -946,7 +946,7 @@ tools:
   owner: iuc
   tool_panel_section_id: ngs_assembly
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # ngs_rna_tools - NGS: RNA Analysis
@@ -1361,13 +1361,13 @@ tools:
   owner: iuc
   tool_panel_section_id: phylogenetics
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
+  install_resolver_dependencies: False
 
 - name: gubbins
   owner: iuc
   tool_panel_section_id: phylogenetics
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
+  install_resolver_dependencies: False
 
 ######################################################################
 ## DATA MANAGERS
