@@ -74,7 +74,7 @@ gvl_galaxy_config:
     galaxy_data_manager_data_path: "{{ galaxy_genome_data_path }}"
 
     tool_config_file: "{{ gvl_galaxy_config_dir }}/tool_conf.xml.sample,{{ galaxy_shed_tool_conf_file }}"
-    tool_data_table_config_path: "{{ gvl_galaxy_config_dir }}/tool_data_table_conf.xml,/cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml""
+    tool_data_table_config_path: "{{ gvl_galaxy_config_dir }}/tool_data_table_conf.xml,/cvmfs/data.galaxyproject.org/managed/location/tool_data_table_conf.xml"
     datatypes_config_file: "{{ gvl_galaxy_config_dir }}/datatypes_conf.xml.sample"
     migrated_tools_config: "{{ gvl_galaxy_mutable_config_dir }}/migrated_tools_conf.xml"
     shed_tool_data_table_config: "{{ gvl_galaxy_mutable_config_dir }}/shed_tool_data_table_conf.xml"
@@ -82,9 +82,10 @@ gvl_galaxy_config:
     builds_file_path: "{{ galaxy_server_dir }}/tool-data/shared/ucsc/builds.txt"
     ucsc_build_sites: "{{ galaxy_server_dir }}/tool-data/shared/ucsc/ucsc_build_sites.txt"
 
-    dynamic_proxy_manage: True
+    dynamic_proxy_manage: False
     dynamic_proxy_bind_port: 8800
     interactive_environment_plugins_directory: config/plugins/interactive_environments
+    dynamic_proxy_prefix: gie_proxy
 
     use_heartbeat: True
     heartbeat_interval: -1
@@ -125,8 +126,6 @@ gvl_galaxy_mutable_configs:
     dest: "{{ gvl_galaxy_config['app:main']['shed_tool_data_table_config'] if gvl_galaxy_config is defined and 'app:main' in gvl_galaxy_config and 'shed_tool_data_table_config' in gvl_galaxy_config['app:main'] else galaxy_config_default['app:main']['shed_tool_data_table_config'] }}"
   - src: "{{ galaxy_server_dir }}/config/datatypes_conf.xml.sample"
     dest: "{{ gvl_galaxy_config['app:main']['datatypes_config_file'] if gvl_galaxy_config is defined and 'app:main' in gvl_galaxy_config and 'datatypes_config_file' in gvl_galaxy_config['app:main'] else galaxy_config_default['app:main']['datatypes_config_file'] }}"
-  - src: "{{ galaxy_server_dir }}/config/tool_data_table_conf.xml.sample"
-    dest: "{{ gvl_galaxy_config['app:main']['tool_data_table_config_path'] }}"
   - src: "{{ galaxy_server_dir }}/config/tool_conf.xml.sample"
     dest: "{{ gvl_galaxy_config_dir }}/tool_conf.xml"
   - src: "{{ galaxy_server_dir }}/tool-data/shared/ucsc/builds.txt.sample"
