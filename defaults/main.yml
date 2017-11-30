@@ -83,9 +83,10 @@ gvl_galaxy_config:
     ucsc_build_sites: "{{ galaxy_server_dir }}/tool-data/shared/ucsc/ucsc_build_sites.txt"
 
     dynamic_proxy_manage: False
-    dynamic_proxy_bind_port: 8800
+    dynamic_proxy_debug: True
+    dynamic_proxy_external_proxy: True
+    dynamic_proxy_prefix: galaxy/gie_proxy
     interactive_environment_plugins_directory: config/plugins/interactive_environments
-    dynamic_proxy_prefix: gie_proxy
 
     use_heartbeat: True
     heartbeat_interval: -1
@@ -94,7 +95,7 @@ gvl_galaxy_config:
     # Conda settings
     conda_prefix: "{{ galaxyFS_base_dir }}/tool_dependencies/_conda"
     conda_debug: False
-    conda_ensure_channels: r,bioconda,iuc
+    conda_ensure_channels: iuc,bioconda,conda-forge,defaults,r
     conda_auto_install: True
     conda_auto_init: True
 
