@@ -37,9 +37,3 @@ dependencies:
       galaxy_tools_delete_bootstrap_user: yes,
       galaxy_tools_tool_list_files: "{{ gvl_galaxy_tools_tool_list_files }}"
     }
-  - { role: galaxyproject.interactive_environments,
-      interactive_environments_plugins_path: "{{ interactive_environment_plugins_directory }}/plugins",
-      interactive_environments_proxy_path: "{{ interactive_environment_plugins_directory }}/proxy",
-      interactive_environments_enabled: [jupyter, bam_iobio],
-      interactive_environments_nginx_conf_dir: "/etc/nginx/sites-enabled"
-    }
