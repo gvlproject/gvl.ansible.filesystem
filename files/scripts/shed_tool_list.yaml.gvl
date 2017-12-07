@@ -1084,6 +1084,18 @@ tools:
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: False
+- name: rseqc
+  owner: nilesh
+  revision: 34e4c586e3c0
+  tool_panel_section_id: ngs_rna_tools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: True
+- name: dexseq
+  owner: iuc
+  revision: f1c406f9554c
+  tool_panel_section_id: ngs_rna_tools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: True
 
 #---------------------------------------------------------------------
 # peak_calling - NGS: Peak Calling
