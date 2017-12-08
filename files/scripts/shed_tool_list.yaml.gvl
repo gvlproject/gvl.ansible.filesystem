@@ -1152,30 +1152,27 @@ tools:
 #  tool_panel_section_id: peak_calling
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
 #  install_resolver_dependencies: False
-#- name: idr_package
-#  owner: modencode-dcc
-#  revision: 6f6a9fbe264e
-#  tool_panel_section_id: peak_calling
-#  tool_shed_url: https://toolshed.g2.bx.psu.edu
-#  install_resolver_dependencies: False
+- name: idr_package
+  owner: modencode-dcc
+  tool_panel_section_id: peak_calling
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 #- name: ccat
 #  owner: devteam
 #  revision: a0c8dc671a23
 #  tool_panel_section_id: peak_calling
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
 #  install_resolver_dependencies: False
-#- name: macs2
-#  owner: iuc
-#  revision: 859c982b1f7f
-#  tool_panel_section_id: peak_calling
-#  tool_shed_url: https://toolshed.g2.bx.psu.edu
-#  install_resolver_dependencies: False
-#- name: sicer
-#  owner: devteam
-#  revision: 82a8234e03f2
-#  tool_panel_section_id: peak_calling
-#  tool_shed_url: https://toolshed.g2.bx.psu.edu
-#  install_resolver_dependencies: False
+- name: macs2
+  owner: iuc
+  tool_panel_section_id: peak_calling
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
+- name: sicer
+  owner: devteam
+  tool_panel_section_id: peak_calling
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # ngs_variant_detection - NGS: Variant Detection
