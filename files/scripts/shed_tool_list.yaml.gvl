@@ -39,6 +39,22 @@ tools:
   install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
+# collection_operations - Collection Operations
+
+- name: collection_column_join
+  owner: iuc
+  tool_panel_section_label: 'Collection Operations'
+  install_resolver_dependencies: False
+- name: bundle_collections
+  owner: nml
+  tool_panel_section_label: 'Collection Operations'
+  install_resolver_dependencies: False
+- name: collapse_collections
+  owner: nml
+  tool_panel_section_label: 'Collection Operations'
+  install_resolver_dependencies: False
+
+#---------------------------------------------------------------------
 # filter - Filter and Sort
 
 #---------------------------------------------------------------------
@@ -261,6 +277,10 @@ tools:
   - fabda887a71f
   tool_panel_section_id: stats
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
+- name: datamash_ops
+  owner: iuc
+  tool_panel_section_id: stats
   install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
@@ -885,6 +905,10 @@ tools:
   tool_panel_section_id: ngs_qc
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: False
+- name: multiqc
+  owner: engineson
+  tool_panel_section_id: ngs_qc
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # ngs_mapping - NGS: Mapping
@@ -947,7 +971,16 @@ tools:
   tool_panel_section_id: ngs_assembly
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: False
-
+- name: quast
+  owner: iuc
+  tool_panel_section_id: ngs_assembly
+  install_resolver_dependencies: False
+- name: velvet
+  owner: devteam
+  tool_panel_section_id: ngs_assembly
+  install_resolver_dependencies: False
+ 
+  
 #---------------------------------------------------------------------
 # ngs_rna_tools - NGS: RNA Analysis
 
@@ -1096,6 +1129,19 @@ tools:
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
   install_resolver_dependencies: True
+- name: edger
+  owner: iuc
+  tool_panel_section_id: ngs_rna_tools
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: True
+- name: gffcompare
+  owner: iuc
+  tool_panel_section_id: ngs_rna_tools
+  install_resolver_dependencies: False
+- name: sailfish
+  owner: bgruening
+  tool_panel_section_id: ngs_rna_tools
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # peak_calling - NGS: Peak Calling
@@ -1106,30 +1152,27 @@ tools:
 #  tool_panel_section_id: peak_calling
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
 #  install_resolver_dependencies: False
-#- name: idr_package
-#  owner: modencode-dcc
-#  revision: 6f6a9fbe264e
-#  tool_panel_section_id: peak_calling
-#  tool_shed_url: https://toolshed.g2.bx.psu.edu
-#  install_resolver_dependencies: False
+- name: idr_package
+  owner: modencode-dcc
+  tool_panel_section_id: peak_calling
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 #- name: ccat
 #  owner: devteam
 #  revision: a0c8dc671a23
 #  tool_panel_section_id: peak_calling
 #  tool_shed_url: https://toolshed.g2.bx.psu.edu
 #  install_resolver_dependencies: False
-#- name: macs2
-#  owner: iuc
-#  revision: 859c982b1f7f
-#  tool_panel_section_id: peak_calling
-#  tool_shed_url: https://toolshed.g2.bx.psu.edu
-#  install_resolver_dependencies: False
-#- name: sicer
-#  owner: devteam
-#  revision: 82a8234e03f2
-#  tool_panel_section_id: peak_calling
-#  tool_shed_url: https://toolshed.g2.bx.psu.edu
-#  install_resolver_dependencies: False
+- name: macs2
+  owner: iuc
+  tool_panel_section_id: peak_calling
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
+- name: sicer
+  owner: devteam
+  tool_panel_section_id: peak_calling
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+  install_resolver_dependencies: False
 
 #---------------------------------------------------------------------
 # ngs_variant_detection - NGS: Variant Detection
