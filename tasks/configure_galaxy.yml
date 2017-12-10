@@ -9,8 +9,8 @@
   with_items:
     - openid/genomespace.xml
 
-- name: GVL Galaxy - Rebuild Galaxy client
-  shell: executable=/bin/bash make client chdir="{{ galaxy_server_dir }}"
+# - name: GVL Galaxy - Rebuild Galaxy client
+#   shell: executable=/bin/bash make client chdir="{{ galaxy_server_dir }}"
 
 - name: Create tool folder for GATK2
   file:
