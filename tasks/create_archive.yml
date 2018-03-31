@@ -68,7 +68,7 @@
   when: gvl_s3_upload
 
 - name: GVL Galaxy - Upload filesystem archive to s3
-  command: s3cmd --access_key={{ AWS_ACCESS_KEY }} --secret_key={{ AWS_SECRET_KEY }} --reduced-redundancy --acl-public put {{ gvl_fs_archive_path }}/{{ gvl_fs_archive_name }} s3://{{ cloudman_bucket_name }}/
+  command: s3cmd --access_key={{ AWS_ACCESS_KEY }} --secret_key={{ AWS_SECRET_KEY }} --acl-public put {{ gvl_fs_archive_path }}/{{ gvl_fs_archive_name }} s3://{{ cloudman_bucket_name }}/
   when: gvl_s3_upload
 
 - name: Get the archive MD5 sum

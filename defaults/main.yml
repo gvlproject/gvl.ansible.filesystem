@@ -20,7 +20,7 @@ gvl_galaxy_len_file_path: "{{ galaxy_server_dir }}/tool-data/len"
 gvl_fs_name: "GVL FileSystem"
 gvl_fs_flavour: default
 gvl_fs_build_date: "{{ ansible_date_time.iso8601 }}"
-gvl_version: "4.3.0"
+gvl_version: "4.4.0"
 gvl_fs_version: "{{ gvl_version }}"
 gvl_galaxy_brand: "GVL {{ gvl_version }}"
 gvl_app_path: "/mnt/gvl/apps"
@@ -93,7 +93,6 @@ gvl_galaxy_config:
     # Conda settings
     conda_prefix: "{{ galaxyFS_base_dir }}/tool_dependencies/_conda"
     conda_debug: False
-    conda_ensure_channels: iuc,bioconda,conda-forge,defaults,r
     conda_auto_install: True
     conda_auto_init: True
 
@@ -136,7 +135,7 @@ gvl_galaxy_mutable_configs:
 
 # gvl setup details
 gvl_galaxy_git_repo: https://github.com/galaxyproject/galaxy
-gvl_galaxy_changeset_id: "release_17.09"
+gvl_galaxy_changeset_id: "release_18.01"
 
 # gvl archive upload details
 gvl_create_archive: False
