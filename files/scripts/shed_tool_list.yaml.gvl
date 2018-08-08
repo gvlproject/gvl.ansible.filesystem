@@ -1019,7 +1019,7 @@ tools:
   revision: d3ae7d9c2202
   tool_panel_section_id: ngs_rna_tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu
-  install_resolver_dependencies: True
+  install_resolver_dependencies: False
 - name: cuffquant
   owner: devteam
   revision: 6dc45faebc1d
