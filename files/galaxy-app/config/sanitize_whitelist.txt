@@ -1,0 +1,2 @@
+toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.68
+toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72
